@@ -30,6 +30,23 @@ Individual steps: `scripts/build_indexes.py`, `scripts/run_benchmark.py`,
 `--threads`, `--nprobe`, `--pq-m`, `--repetitions`, `--rebuild`.
 All experiment settings live in `config/default.yaml`.
 
+### Final figures
+
+The report figures in `results/figures/final/` come from run `gist1m_20261102_151830`
+(5 repetitions); run `gist1m_20261102_151037` is an independent repeat used only to
+check latency stability.
+
+```bash
+.venv/bin/python scripts/compute_exact1nn_hit.py --run-id gist1m_20261102_151830
+.venv/bin/python scripts/generate_final_figures.py --run-id gist1m_20261102_151830 \
+    --comparison-run gist1m_20261102_151037
+```
+
+`compute_exact1nn_hit.py` re-searches the cached indexes (no timing) to get Exact-1NN
+Hit@R, after verifying that it reproduces the run's recorded Recall@1/10/100 exactly.
+`results/figures/final/README.md` documents the setup and the latency caveat, and
+`plotted_values.csv` lists every plotted value with its source column.
+
 ## Dataset (GIST1M, TEXMEX)
 
 | file | vectors | notes |
@@ -85,11 +102,16 @@ results/raw/<run_id>_metadata.json    versions, CPU, threads, full config, seed,
 results/summary/<run_id>_summary.csv  one row per (index, nprobe) – main table
 results/summary/<run_id>_vs_ivfflat.csv       RQ2: PQ vs Flat at equal nprobe
 results/summary/<run_id>_recall_matched.csv   RQ3: smallest PQ nprobe reaching Flat recall
+results/summary/<run_id>_exact1nn_hit100.csv  Exact-1NN Hit@R (compute_exact1nn_hit.py)
 results/figures/<run_id>/             fig1–fig5 (PDF + PNG)
+results/figures/final/                report figures (PDF + PNG), README, plotted_values.csv
 ```
 
 `generate_plots.py` re-aggregates from the raw files, so summaries can be recomputed
 without re-running searches.
+
+Only `results/figures/final/` is version-controlled. Raw measurements, summaries,
+indexes, logs and the dataset are generated locally and excluded by `.gitignore`.
 
 ## Layout
 
@@ -101,6 +123,7 @@ src/metrics.py        Recall@K, latency stats, Pareto mask
 src/memory.py         theoretical vs serialized size
 src/benchmark.py      timed search runs, raw output, aggregation, comparison tables
 src/plotting.py       figures
-scripts/              download, build, benchmark, plots, run_all
+scripts/              download, build, benchmark, plots, run_all,
+                      compute_exact1nn_hit, generate_final_figures
 tests/                dataset, metric and small-FAISS tests
 ```

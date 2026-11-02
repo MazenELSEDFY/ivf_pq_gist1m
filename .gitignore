@@ -6,6 +6,11 @@ logs/
 __pycache__/
 .pytest_cache/
 *.tmp
+.DS_Store
 
+# Experiment outputs are regenerated locally; only the final figures are versioned.
 results/raw/
+results/summary/
 results/smoke/
+results/figures/*
+!results/figures/final/
