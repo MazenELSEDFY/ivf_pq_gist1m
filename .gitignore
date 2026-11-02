@@ -6,3 +6,6 @@ logs/
 __pycache__/
 .pytest_cache/
 *.tmp
+
+results/raw/
+results/smoke/
