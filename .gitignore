@@ -1,0 +1,8 @@
+.venv/
+data/gist1m/
+data/gist1m_download/
+indexes/
+logs/
+__pycache__/
+.pytest_cache/
+*.tmp

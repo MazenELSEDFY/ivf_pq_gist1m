@@ -1,0 +1,68 @@
+# Single source of truth for the experiment. CLI flags may override selected values;
+# every run writes the fully-resolved config into its metadata file.
+
+seed: 1234
+
+dataset:
+  name: gist1m
+  dir: data/gist1m
+  files:
+    base: gist_base.fvecs
+    learn: gist_learn.fvecs
+    query: gist_query.fvecs
+    groundtruth: gist_groundtruth.ivecs
+  dim: 960
+  # Sizes of the files as distributed (TEXMEX GIST1M). The loader validates against these.
+  expected:
+    database_size: 1000000
+    learn_size: 500000
+    query_size: 1000
+    groundtruth_k: 100
+  # Training uses the first `train_size` rows of the learn file (deterministic prefix).
+  train_size: 100000
+
+faiss:
+  metric: l2
+  threads: 4          # 4 performance cores on the Apple M5; same value for every index
+
+ivf:
+  nlist: 1024
+  nprobe: [1, 4, 16, 32]
+  share_coarse_quantizer: true   # all indexes reuse one set of k-means centroids
+  kmeans_niter: 20               # FAISS default for IVF training
+
+pq:
+  m: [16, 32, 64]
+  nbits: 8
+
+build:
+  add_batch_size: 100000   # rows of the base matrix materialised at a time during add()
+
+search:
+  k: 100
+  repetitions: 3
+  warmup_runs: 1
+  # Throughput mode: whole query set per search call (null = all queries).
+  throughput_batch_size: null
+  # Latency mode: one query per search call -> per-query latency distribution.
+  latency_batch_size: 1
+
+metrics:
+  recall_k: [1, 10, 100]
+
+paths:
+  indexes: indexes
+  results_raw: results/raw
+  results_summary: results/summary
+  figures: results/figures
+  logs: logs
+
+# --smoke-test overrides. Subsets of a real dataset invalidate the supplied ground
+# truth (it refers to the full 1M base), so smoke runs compute exact GT by brute force.
+smoke_test:
+  train_size: 10000
+  database_size: 20000
+  query_size: 100
+  nlist: 64
+  repetitions: 2
+  synthetic_if_missing: true   # use random Gaussian data when GIST1M is not on disk
