@@ -141,6 +141,44 @@ def main(argv=None):
         _save(fig, out, "recall_vs_qps_rerank")
         plt.close(fig)
 
+    # ---- figure + table: OPQ vs PQ on identical lists (scripts/opq_experiment.py) ------
+    opq_path = summ / f"{args.run_id}_opq_attribution.csv"
+    if opq_path.exists():
+        opq = pd.read_csv(opq_path)
+        k = ["pq_m", "nprobe", "rerank_R"]
+        cmp = (pq[k + ["coverage_at_10", "recall_at_10"]]
+               .merge(opq[k + ["coverage_at_10", "recall_at_10"]], on=k, suffixes=("_pq", "_opq"),
+                      validate="one_to_one"))
+        cmp["gain"] = cmp.recall_at_10_opq - cmp.recall_at_10_pq
+        cmp.to_csv(summ / f"{args.run_id}_opq_vs_pq.csv", index=False)
+
+        fig, axes = plt.subplots(1, len(ms), figsize=(3.1 * len(ms), 3.0), sharey=True)
+        for ax, m, col, mk in zip(np.atleast_1d(axes), ms, PQ_RAMP, PQ_MARKERS):
+            ax.plot(flat.nprobe, flat.coverage_at_10, color=FLAT_COLOR, marker="s",
+                    markeredgecolor="white", markeredgewidth=0.8, label="IVF coverage (= IVF-Flat)")
+            for src, ls, name in [(pq, ":", "PQ"), (opq, "-", "OPQ")]:
+                s = src[(src.pq_m == m) & (src.rerank_R == 0)].sort_values("nprobe")
+                ax.plot(s.nprobe, s.recall_at_10, color=col, ls=ls, marker=mk,
+                        markeredgecolor="white" if name == "OPQ" else col, markeredgewidth=1.0,
+                        mfc=col if name == "OPQ" else "white", label=name)
+                _end_label(ax, s.nprobe.iloc[-1], s.recall_at_10.iloc[-1], name, INK2)
+            for src, ls, name in [(pq, ":", "PQ"), (opq, "-", "OPQ")]:
+                s = src[(src.pq_m == m) & (src.rerank_R == 100)].sort_values("nprobe")
+                if len(s):
+                    ax.plot(s.nprobe, s.recall_at_10, color=INK2, ls=ls, lw=1.2,
+                            label=f"{name} + exact rerank of top 100")
+            ax.set_title(f"M={m} ({m} B/vector)", color=INK)
+            _nprobe_axis(ax, nprobes)
+            ax.tick_params(axis="x", labelrotation=45)
+            ax.set_ylim(0, 1.02)
+        np.atleast_1d(axes)[0].set_ylabel("Recall@10")
+        h, lab = np.atleast_1d(axes)[0].get_legend_handles_labels()
+        fig.legend(h, lab, loc="lower center", ncol=len(lab), frameon=False,
+                   bbox_to_anchor=(0.5, -0.08))
+        fig.tight_layout()
+        _save(fig, out, "opq_vs_pq")
+        plt.close(fig)
+
     with pd.option_context("display.width", 200, "display.max_columns", 20):
         print(att.round(3).to_string(index=False))
         print(mr[["target_recall_at_10", "family", "reached", "config", "qps", "speedup_vs_flat"]]
