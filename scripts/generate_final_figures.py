@@ -395,6 +395,18 @@ def fig_stability(df, cmp_df, order, run_id, cmp_id, out):
 
 # --------------------------------------------------------------------------- README
 
+def machine_desc(meta) -> str:
+    """Human-readable description of the machine a run was measured on (from its metadata)."""
+    cpu = meta.get("cpu", {})
+    model = cpu.get("machdep.cpu.brand_string") or cpu.get("model_name") or cpu.get("machine", "?")
+    ram = cpu.get("total_ram_bytes")
+    host = meta.get("hostname")
+    parts = [model] + ([f"{ram / 2**30:.0f} GiB RAM"] if ram else []) + ([f"host {host}"] if host else [])
+    if meta.get("slurm_job_id"):
+        parts.append(f"SLURM job {meta['slurm_job_id']}, {meta.get('slurm_cpus', '?')} CPUs allocated")
+    return ", ".join(parts)
+
+
 def write_readme(out, run_id, cmp_id, meta, df, stab, hit_path):
     sw = df.groupby("name", sort=False)["swap_in_bytes_during_search"].first()
     lines = [
@@ -421,11 +433,12 @@ def write_readme(out, run_id, cmp_id, meta, df, stab, hit_path):
         f"from the run's cached indexes (no timing); that script verified Recall@1/10/100 equal the "
         f"run's recorded values exactly before saving `{hit_path.name}`.",
         "", "## Latency caveat", "",
-        "Latency was measured on a local Mac (Apple M5, 16 GB RAM) while other applications were "
-        "running. Memory pressure caused some swapping during timed search; the bytes swapped in "
-        "(system-wide counter) while each index was being searched were:", "",
+        f"Latency was measured on {machine_desc(meta)}. Bytes swapped in (system-wide counter) "
+        "while each index was being searched:", "",
         "| index | swap-in during search |", "|---|---|",
         *[f"| {n} | {v / 1024**2:.0f} MiB |" for n, v in sw.items()], "",
+        ("Some swapping occurred, which can inflate latency." if sw.sum() > 0
+         else "No swapping occurred during timed search."), "",
         "Measured latencies were not modified, corrected or filtered. Absolute latencies should be "
         "interpreted with care; the comparison between indexes is the more reliable signal.", "",
     ]

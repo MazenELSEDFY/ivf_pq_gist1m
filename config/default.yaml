@@ -23,7 +23,7 @@ dataset:
 
 faiss:
   metric: l2
-  threads: 4          # 4 performance cores on the Apple M5; same value for every index
+  threads: 4          # same value for every index (4 performance cores on the Apple M5; 8 CPUs allocated on watgpu)
 
 ivf:
   nlist: 1024
