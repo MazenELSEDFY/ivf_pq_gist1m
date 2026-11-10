@@ -109,6 +109,7 @@ def main(argv=None):
         _end_label(ax, base.nprobe.iloc[-1], base.pq_recall_at_10.iloc[-1], "PQ", INK2)
         ax.set_title(f"IVF-PQ M={m} ({m} B/vector)", color=INK)
         _nprobe_axis(ax, nprobes)
+        ax.tick_params(axis="x", labelrotation=45)
         ax.set_ylim(0, 1.02)
     np.atleast_1d(axes)[0].set_ylabel("Recall@10")
     h, lab = np.atleast_1d(axes)[0].get_legend_handles_labels()

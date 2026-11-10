@@ -14,3 +14,4 @@ results/summary/
 results/smoke/
 results/figures/*
 !results/figures/final/
+!results/figures/final_watgpu/
