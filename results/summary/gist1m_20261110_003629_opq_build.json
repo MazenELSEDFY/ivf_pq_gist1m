@@ -1,0 +1,29 @@
+{
+  "ivfopq_m16_nbits8_nlist1024": {
+    "opq_train_s": 345.01854367996566,
+    "pq_train_s": 15.152634936152026,
+    "add_s": 48.93291217973456,
+    "orthogonality_max_dev": 1.0945974020515337e-06,
+    "serialized_size_bytes": 32610043,
+    "assignment_differs_from_flat": 9,
+    "max_coverage_gap_vs_flat": 0.0
+  },
+  "ivfopq_m32_nbits8_nlist1024": {
+    "opq_train_s": 305.4592945468612,
+    "pq_train_s": 9.709782405057922,
+    "add_s": 61.962202784605324,
+    "orthogonality_max_dev": 1.157306202426156e-06,
+    "serialized_size_bytes": 48610043,
+    "assignment_differs_from_flat": 12,
+    "max_coverage_gap_vs_flat": 0.0
+  },
+  "ivfopq_m64_nbits8_nlist1024": {
+    "opq_train_s": 377.16958663915284,
+    "pq_train_s": 10.64782802388072,
+    "add_s": 71.2576733645983,
+    "orthogonality_max_dev": 1.29684052474488e-06,
+    "serialized_size_bytes": 80610043,
+    "assignment_differs_from_flat": 8,
+    "max_coverage_gap_vs_flat": 0.00019999999999997797
+  }
+}

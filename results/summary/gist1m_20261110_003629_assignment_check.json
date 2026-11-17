@@ -1,0 +1,18 @@
+{
+  "reference": "ivfflat_nlist1024",
+  "ivfpq_m16_nbits8_nlist1024": {
+    "identical_ids": 1000000,
+    "n": 1000000,
+    "identical": true
+  },
+  "ivfpq_m32_nbits8_nlist1024": {
+    "identical_ids": 1000000,
+    "n": 1000000,
+    "identical": true
+  },
+  "ivfpq_m64_nbits8_nlist1024": {
+    "identical_ids": 1000000,
+    "n": 1000000,
+    "identical": true
+  }
+}

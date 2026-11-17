@@ -1,0 +1,141 @@
+{
+  "run_id": "gist1m_20261102_151830",
+  "timestamp": "2026-11-02T15:19:51",
+  "python_version": "3.10.6",
+  "faiss_version": "1.15.1",
+  "numpy_version": "2.2.6",
+  "platform": "macOS-26.7.2-arm64-arm-64bit",
+  "cpu": {
+    "machine": "arm64",
+    "processor": "arm",
+    "logical_cpus": 10,
+    "machdep.cpu.brand_string": "Apple M5",
+    "hw.memsize": "17179869184",
+    "hw.perflevel0.physicalcpu": "4",
+    "hw.perflevel1.physicalcpu": "6",
+    "total_ram_bytes": 17179869184
+  },
+  "faiss_threads": 4,
+  "git_commit": "d967f9e2260b97b65fc2a14ca95115447f8d7c96",
+  "config": {
+    "seed": 1234,
+    "dataset": {
+      "name": "gist1m",
+      "dir": "data/gist1m",
+      "files": {
+        "base": "gist_base.fvecs",
+        "learn": "gist_learn.fvecs",
+        "query": "gist_query.fvecs",
+        "groundtruth": "gist_groundtruth.ivecs"
+      },
+      "dim": 960,
+      "expected": {
+        "database_size": 1000000,
+        "learn_size": 500000,
+        "query_size": 1000,
+        "groundtruth_k": 100
+      },
+      "train_size": 100000
+    },
+    "faiss": {
+      "metric": "l2",
+      "threads": 4
+    },
+    "ivf": {
+      "nlist": 1024,
+      "nprobe": [
+        1,
+        4,
+        16,
+        32
+      ],
+      "share_coarse_quantizer": true,
+      "kmeans_niter": 20
+    },
+    "pq": {
+      "m": [
+        16,
+        32,
+        64
+      ],
+      "nbits": 8
+    },
+    "build": {
+      "add_batch_size": 100000
+    },
+    "search": {
+      "k": 100,
+      "repetitions": 5,
+      "warmup_runs": 1,
+      "throughput_batch_size": null,
+      "latency_batch_size": 1
+    },
+    "metrics": {
+      "recall_k": [
+        1,
+        10,
+        100
+      ]
+    },
+    "paths": {
+      "indexes": "indexes",
+      "results_raw": "results/raw",
+      "results_summary": "results/summary",
+      "figures": "results/figures",
+      "logs": "logs"
+    },
+    "smoke_test": {
+      "train_size": 10000,
+      "database_size": 20000,
+      "query_size": 100,
+      "nlist": 64,
+      "repetitions": 2,
+      "synthetic_if_missing": true
+    },
+    "smoke": false
+  },
+  "dataset": {
+    "source": "gist1m",
+    "gt_source": "supplied",
+    "dim": 960,
+    "n_train": 100000,
+    "n_base": 1000000,
+    "n_query": 1000,
+    "gt_k": 100,
+    "paths": {
+      "base": "data/gist1m/gist_base.fvecs",
+      "learn": "data/gist1m/gist_learn.fvecs",
+      "query": "data/gist1m/gist_query.fvecs",
+      "groundtruth": "data/gist1m/gist_groundtruth.ivecs"
+    },
+    "file_sizes": {
+      "base": 3844000000,
+      "learn": 1922000000,
+      "query": 3844000,
+      "groundtruth": 404000
+    },
+    "learn_file_rows": 500000,
+    "train_rows": "learn[0:100000]"
+  },
+  "faiss_threads_effective": 4,
+  "throughput_batch_size": 1000,
+  "latency_batch_size": 1,
+  "latency_warmup_queries": 1000,
+  "k": 100,
+  "repetitions": 5,
+  "warmup_runs": 1,
+  "seed": 1234,
+  "nprobe": [
+    1,
+    4,
+    16,
+    32
+  ],
+  "outputs": {
+    "indexes": "results/raw/gist1m_20261102_151830_indexes.csv",
+    "recall": "results/raw/gist1m_20261102_151830_recall.csv",
+    "throughput": "results/raw/gist1m_20261102_151830_throughput.csv",
+    "latency": "results/raw/gist1m_20261102_151830_latency.csv.gz",
+    "metadata": "results/raw/gist1m_20261102_151830_metadata.json"
+  }
+}

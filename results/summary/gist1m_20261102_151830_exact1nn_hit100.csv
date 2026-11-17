@@ -1,0 +1,17 @@
+index,label,index_type,pq_m,nprobe,n_queries,k_searched,recall_matches_run,run_id,exact1nn_hit_at_1,exact1nn_hit_at_10,exact1nn_hit_at_100
+ivfflat_nlist1024,IVF-Flat,ivfflat,,1,1000,100,True,gist1m_20261102_151830,0.294,0.297,0.297
+ivfflat_nlist1024,IVF-Flat,ivfflat,,4,1000,100,True,gist1m_20261102_151830,0.57,0.576,0.576
+ivfflat_nlist1024,IVF-Flat,ivfflat,,16,1000,100,True,gist1m_20261102_151830,0.847,0.853,0.853
+ivfflat_nlist1024,IVF-Flat,ivfflat,,32,1000,100,True,gist1m_20261102_151830,0.927,0.933,0.933
+ivfpq_m16_nbits8_nlist1024,IVF-PQ M=16,ivfpq,16.0,1,1000,100,True,gist1m_20261102_151830,0.109,0.205,0.287
+ivfpq_m16_nbits8_nlist1024,IVF-PQ M=16,ivfpq,16.0,4,1000,100,True,gist1m_20261102_151830,0.131,0.297,0.514
+ivfpq_m16_nbits8_nlist1024,IVF-PQ M=16,ivfpq,16.0,16,1000,100,True,gist1m_20261102_151830,0.136,0.34,0.646
+ivfpq_m16_nbits8_nlist1024,IVF-PQ M=16,ivfpq,16.0,32,1000,100,True,gist1m_20261102_151830,0.137,0.346,0.663
+ivfpq_m32_nbits8_nlist1024,IVF-PQ M=32,ivfpq,32.0,1,1000,100,True,gist1m_20261102_151830,0.133,0.251,0.295
+ivfpq_m32_nbits8_nlist1024,IVF-PQ M=32,ivfpq,32.0,4,1000,100,True,gist1m_20261102_151830,0.175,0.423,0.561
+ivfpq_m32_nbits8_nlist1024,IVF-PQ M=32,ivfpq,32.0,16,1000,100,True,gist1m_20261102_151830,0.202,0.52,0.795
+ivfpq_m32_nbits8_nlist1024,IVF-PQ M=32,ivfpq,32.0,32,1000,100,True,gist1m_20261102_151830,0.204,0.528,0.834
+ivfpq_m64_nbits8_nlist1024,IVF-PQ M=64,ivfpq,64.0,1,1000,100,True,gist1m_20261102_151830,0.156,0.28,0.296
+ivfpq_m64_nbits8_nlist1024,IVF-PQ M=64,ivfpq,64.0,4,1000,100,True,gist1m_20261102_151830,0.228,0.485,0.571
+ivfpq_m64_nbits8_nlist1024,IVF-PQ M=64,ivfpq,64.0,16,1000,100,True,gist1m_20261102_151830,0.25,0.623,0.837
+ivfpq_m64_nbits8_nlist1024,IVF-PQ M=64,ivfpq,64.0,32,1000,100,True,gist1m_20261102_151830,0.255,0.647,0.908

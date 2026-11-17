@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
-#SBATCH --time=10:00:00
+#SBATCH --time=12:00:00
 #SBATCH --output=logs/ivfpq_full_%j.out
 # Full IVF-Flat vs IVF-PQ study on one watgpu node, so every reported number comes from
 # the same machine:
@@ -12,7 +12,8 @@
 #   2. build indexes (fresh, shared coarse quantizer) + benchmark run 1 (5 reps) + plots
 #   3. benchmark run 2 (independent repeat, cached indexes) for latency stability
 #   4. Exact-1NN Hit@R, error attribution (coverage vs PQ ranking, rerank), resident memory
-#   5. final report figures -> results/figures/final_watgpu
+#   5. OPQ confirmation experiment (appendix)
+#   6. report figures and tables -> results/figures/final_watgpu, results/summary
 # FAISS uses 4 threads (config) inside an 8-CPU allocation, so OS/other work does not
 # compete with the timed threads.
 set -euo pipefail
@@ -52,7 +53,12 @@ $PY scripts/compute_exact1nn_hit.py --run-id "$RUN1"
 $PY scripts/diagnose_error.py --run-id "$RUN1"
 $PY scripts/measure_resident_memory.py --run-id "$RUN1" --nprobe 32 --rerank 100 1000
 
-echo "== 5. final figures"
+echo "== 5. OPQ confirmation experiment (appendix)"
+$PY scripts/opq_experiment.py --run-id "$RUN1"
+
+echo "== 6. final figures and tables"
 $PY scripts/generate_final_figures.py --run-id "$RUN1" --comparison-run "$RUN2" \
     --out results/figures/final_watgpu
+$PY scripts/analyze_attribution.py --run-id "$RUN1" --out results/figures/final_watgpu
+$PY scripts/frontier.py --run-id "$RUN1" --out results/figures/final_watgpu
 echo "== done $(date)  RUN1=$RUN1 RUN2=$RUN2"

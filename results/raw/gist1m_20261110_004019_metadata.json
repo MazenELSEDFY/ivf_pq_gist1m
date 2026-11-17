@@ -1,0 +1,141 @@
+{
+  "run_id": "gist1m_20261110_004019",
+  "timestamp": "2026-11-10T00:44:09",
+  "python_version": "3.10.12",
+  "faiss_version": "1.15.1",
+  "numpy_version": "2.2.6",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.35",
+  "hostname": "watgpu208",
+  "slurm_job_id": "1681750",
+  "slurm_cpus": "8",
+  "cpu": {
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "logical_cpus": 32,
+    "model_name": "Intel(R) Xeon(R) Gold 5415+",
+    "total_ram_bytes": 651999997952
+  },
+  "faiss_threads": 4,
+  "git_commit": "04a7705b8b8d53adac9c225f236c738f9cdf4d01",
+  "config": {
+    "seed": 1234,
+    "dataset": {
+      "name": "gist1m",
+      "dir": "data/gist1m",
+      "files": {
+        "base": "gist_base.fvecs",
+        "learn": "gist_learn.fvecs",
+        "query": "gist_query.fvecs",
+        "groundtruth": "gist_groundtruth.ivecs"
+      },
+      "dim": 960,
+      "expected": {
+        "database_size": 1000000,
+        "learn_size": 500000,
+        "query_size": 1000,
+        "groundtruth_k": 100
+      },
+      "train_size": 100000
+    },
+    "faiss": {
+      "metric": "l2",
+      "threads": 4
+    },
+    "ivf": {
+      "nlist": 1024,
+      "nprobe": [
+        1,
+        4,
+        16,
+        32
+      ],
+      "share_coarse_quantizer": true,
+      "kmeans_niter": 20
+    },
+    "pq": {
+      "m": [
+        16,
+        32,
+        64
+      ],
+      "nbits": 8
+    },
+    "build": {
+      "add_batch_size": 100000
+    },
+    "search": {
+      "k": 100,
+      "repetitions": 5,
+      "warmup_runs": 1,
+      "throughput_batch_size": null,
+      "latency_batch_size": 1
+    },
+    "metrics": {
+      "recall_k": [
+        1,
+        10,
+        100
+      ]
+    },
+    "paths": {
+      "indexes": "indexes",
+      "results_raw": "results/raw",
+      "results_summary": "results/summary",
+      "figures": "results/figures",
+      "logs": "logs"
+    },
+    "smoke_test": {
+      "train_size": 10000,
+      "database_size": 20000,
+      "query_size": 100,
+      "nlist": 64,
+      "repetitions": 2,
+      "synthetic_if_missing": true
+    },
+    "smoke": false
+  },
+  "dataset": {
+    "source": "gist1m",
+    "gt_source": "supplied",
+    "dim": 960,
+    "n_train": 100000,
+    "n_base": 1000000,
+    "n_query": 1000,
+    "gt_k": 100,
+    "paths": {
+      "base": "data/gist1m/gist_base.fvecs",
+      "learn": "data/gist1m/gist_learn.fvecs",
+      "query": "data/gist1m/gist_query.fvecs",
+      "groundtruth": "data/gist1m/gist_groundtruth.ivecs"
+    },
+    "file_sizes": {
+      "base": 3844000000,
+      "learn": 1922000000,
+      "query": 3844000,
+      "groundtruth": 404000
+    },
+    "learn_file_rows": 500000,
+    "train_rows": "learn[0:100000]"
+  },
+  "faiss_threads_effective": 4,
+  "throughput_batch_size": 1000,
+  "latency_batch_size": 1,
+  "latency_warmup_queries": 1000,
+  "k": 100,
+  "repetitions": 5,
+  "warmup_runs": 1,
+  "seed": 1234,
+  "nprobe": [
+    1,
+    4,
+    16,
+    32
+  ],
+  "outputs": {
+    "indexes": "results/raw/gist1m_20261110_004019_indexes.csv",
+    "recall": "results/raw/gist1m_20261110_004019_recall.csv",
+    "throughput": "results/raw/gist1m_20261110_004019_throughput.csv",
+    "latency": "results/raw/gist1m_20261110_004019_latency.csv.gz",
+    "metadata": "results/raw/gist1m_20261110_004019_metadata.json"
+  }
+}

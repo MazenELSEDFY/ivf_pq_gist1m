@@ -8,9 +8,25 @@ __pycache__/
 *.tmp
 .DS_Store
 
-# Experiment outputs are regenerated locally; only the final figures are versioned.
-results/raw/
-results/summary/
+# Experiment outputs are regenerated locally. The measurements behind the report are
+# versioned (small CSV/JSON) so every figure and table can be rebuilt without re-running:
+#   gist1m_20261110_003629 / _004019  final watgpu runs (main + repeat)
+#   gist1m_20261102_151830 / _151037  earlier Mac runs (results/figures/final/)
+results/raw/*
+results/summary/*
+!results/raw/gist1m_20261110_003629_*
+!results/raw/gist1m_20261110_004019_*
+!results/raw/gist1m_20261102_151830_*
+!results/raw/gist1m_20261102_151037_*
+!results/summary/gist1m_20261110_003629_*
+!results/summary/gist1m_20261110_004019_*
+!results/summary/gist1m_20261102_151830_summary.csv
+!results/summary/gist1m_20261102_151830_vs_ivfflat.csv
+!results/summary/gist1m_20261102_151830_recall_matched.csv
+!results/summary/gist1m_20261102_151830_exact1nn_hit100.csv
+!results/summary/gist1m_20261102_151037_summary.csv
+!results/summary/gist1m_20261102_151037_vs_ivfflat.csv
+!results/summary/gist1m_20261102_151037_recall_matched.csv
 results/smoke/
 results/figures/*
 !results/figures/final/

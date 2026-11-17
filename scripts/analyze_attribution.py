@@ -6,7 +6,12 @@ Outputs (results/figures/<out>/ and results/summary/):
                                 PQ ranking, and PQ + exact rerank; shaded gap = PQ ranking loss
   recall_vs_qps_rerank.{pdf,png} Recall@10 vs batch QPS for every configuration
   <run>_attribution_table.csv   loss decomposition per (M, nprobe)
-  <run>_matched_recall_v2.csv   cheapest config (max QPS) per target Recall@10, with memory
+  <run>_matched_recall_v2.csv   cheapest config (max QPS) per target Recall@10, with memory.
+                                Column `scope`: "proposal" = IVF-Flat / plain IVF-PQ (the planned
+                                systems); "diagnostic" = IVF-PQ + exact rerank, which reads the raw
+                                vectors and is outside the proposal's compressed-domain scope.
+  appendix/opq_vs_pq.{pdf,png}  OPQ vs PQ on identical lists (OPQ is a proposal non-goal; shown only
+                                as a confirmation that the gap is PQ ranking error)
 """
 import argparse
 
@@ -18,7 +23,7 @@ import pandas as pd
 from src.plotting import FLAT_COLOR, INK, INK2, PQ_MARKERS, PQ_RAMP, _end_label, _nprobe_axis, _save
 from src.utils import resolve
 
-TARGETS = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
+TARGETS = [0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
 
 
 def config_label(r) -> str:
@@ -68,18 +73,19 @@ def main(argv=None):
 
     # ---- table: matched recall ------------------------------------------------------
     rows = []
-    families = [("IVF-Flat", df.index_type == "ivfflat")]
-    families += [(f"IVF-PQ M={m}", (df.pq_m == m) & (df.rerank_R == 0)) for m in ms]
-    families += [(f"IVF-PQ M={m} + rerank", (df.pq_m == m) & (df.rerank_R > 0)) for m in ms]
+    families = [("IVF-Flat", df.index_type == "ivfflat", "proposal")]
+    families += [(f"IVF-PQ M={m}", (df.pq_m == m) & (df.rerank_R == 0), "proposal") for m in ms]
+    families += [(f"IVF-PQ M={m} + rerank", (df.pq_m == m) & (df.rerank_R > 0), "diagnostic")
+                 for m in ms]
     for t in TARGETS:
-        for fam, mask in families:
+        for fam, mask, scope in families:
             ok = df[mask & (df.recall_at_10 >= t)]
             if ok.empty:
-                rows.append({"target_recall_at_10": t, "family": fam, "reached": False,
+                rows.append({"target_recall_at_10": t, "family": fam, "scope": scope, "reached": False,
                              "best_recall_in_family": df[mask].recall_at_10.max()})
                 continue
             b = ok.sort_values("qps", ascending=False).iloc[0]
-            rows.append({"target_recall_at_10": t, "family": fam, "reached": True,
+            rows.append({"target_recall_at_10": t, "family": fam, "scope": scope, "reached": True,
                          "config": b.config, "nprobe": b.nprobe, "rerank_R": b.rerank_R,
                          "recall_at_10": b.recall_at_10, "qps": b.qps,
                          "ms_per_query_batch": 1000 / b.qps, "index_file_bytes": b.index_file_bytes,
@@ -176,7 +182,8 @@ def main(argv=None):
         fig.legend(h, lab, loc="lower center", ncol=len(lab), frameon=False,
                    bbox_to_anchor=(0.5, -0.08))
         fig.tight_layout()
-        _save(fig, out, "opq_vs_pq")
+        (out / "appendix").mkdir(exist_ok=True)
+        _save(fig, out / "appendix", "opq_vs_pq")
         plt.close(fig)
 
     with pd.option_context("display.width", 200, "display.max_columns", 20):
