@@ -39,7 +39,7 @@ latency does not.
    PQ32 0.266, PQ16 0.177.
 3. **RQ3 more nprobe** (`error_attribution.*`, `*_attribution_table.csv`): coverage of the
    true top-10 is 0.80 at nprobe 16, 0.91 at 32, 1.0 at 1024, and IVF-Flat attains it
-   exactly (5/10,000 exceptions = exact duplicate vectors). PQ recall is flat from nprobe 16:
+   exactly (at most 8 of 10,000 neighbor slots differ, all exact duplicate vectors at equal distance). PQ recall is flat from nprobe 16:
    PQ64 0.354 -> 0.364 even at nprobe = nlist. Up to ~nprobe 16 loss is IVF routing;
    beyond, it is PQ ranking error that nprobe cannot recover.
 4. **Proof it is ranking, not candidates:** exact re-scoring of PQ's top-1000 on the same

@@ -29,6 +29,10 @@ from .utils import resolve
 
 log = logging.getLogger(__name__)
 
+# Coarse centroid files retrained in this process. `rebuild=True` retrains the shared
+# k-means once per process, not once per index, so every index reuses the same run.
+_COARSE_REBUILT: set[Path] = set()
+
 
 class IncompatibleIndexError(RuntimeError):
     pass
@@ -102,7 +106,7 @@ def get_coarse_centroids(cfg: dict[str, Any], ds: Dataset, rebuild: bool = False
     npy, meta_path = out_dir / f"coarse_nlist{nlist}.npy", out_dir / f"coarse_nlist{nlist}.json"
     spec = coarse_spec(cfg, ds)
 
-    if npy.exists() and meta_path.exists() and not rebuild:
+    if npy.exists() and meta_path.exists() and (not rebuild or npy in _COARSE_REBUILT):
         meta = json.loads(meta_path.read_text())
         if meta["spec"] != spec:
             raise IncompatibleIndexError("cached coarse centroids do not match config:\n  "
@@ -128,6 +132,7 @@ def get_coarse_centroids(cfg: dict[str, Any], ds: Dataset, rebuild: bool = False
     cent = q.reconstruct_n(0, nlist).copy()
     log.info("Coarse k-means training completed in %.2f s", t)
     np.save(npy, cent)
+    _COARSE_REBUILT.add(npy)
     meta = {"spec": spec, "train_time_s": t, "centroids_sha1": _sha1(cent),
             "faiss_version": faiss.__version__, "faiss_threads": cfg["faiss"]["threads"],
             "created": _dt.datetime.now().isoformat(timespec="seconds")}
