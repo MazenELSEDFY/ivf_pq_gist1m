@@ -18,7 +18,7 @@ recall10_vs_nprobe,IVF-PQ (64 B),32,recall_at_10,0.3617,summary.recall_at_10
 recall10_vs_p95_latency,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,1,latency_p95_ms,0.8811197499999994,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-Flat,4,latency_p95_ms,3.03446145,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,IVF-Flat,4,latency_p95_ms,3.0344614499999993,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,16,latency_p95_ms,10.5302592,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10 / summary.latency_p95_ms
@@ -197,7 +197,7 @@ latency_stability_p50,IVF-PQ (64 B),32,latency_p50_ms,1.574973,summary of both r
 latency_stability_p50,IVF-PQ (64 B),32,latency_p50_ms_cmp,1.252491,summary of both runs
 latency_stability_p95,IVF-Flat,1,latency_p95_ms,0.8811197499999994,summary of both runs
 latency_stability_p95,IVF-Flat,1,latency_p95_ms_cmp,1.2941465999999993,summary of both runs
-latency_stability_p95,IVF-Flat,4,latency_p95_ms,3.03446145,summary of both runs
+latency_stability_p95,IVF-Flat,4,latency_p95_ms,3.0344614499999993,summary of both runs
 latency_stability_p95,IVF-Flat,4,latency_p95_ms_cmp,3.8011054499999983,summary of both runs
 latency_stability_p95,IVF-Flat,16,latency_p95_ms,10.5302592,summary of both runs
 latency_stability_p95,IVF-Flat,16,latency_p95_ms_cmp,10.8983868,summary of both runs

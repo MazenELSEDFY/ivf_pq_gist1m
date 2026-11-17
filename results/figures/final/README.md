@@ -16,7 +16,7 @@ Every plotted value is listed with its source column in `plotted_values.csv`. No
 
 ## Latency caveat
 
-Latency was measured on a local Mac (Apple M5, 16 GB RAM) while other applications were running. Memory pressure caused some swapping during timed search; the bytes swapped in (system-wide counter) while each index was being searched were:
+Latency was measured on Apple M5, 16 GiB RAM. Bytes swapped in (system-wide counter) while each index was being searched:
 
 | index | swap-in during search |
 |---|---|
@@ -24,6 +24,8 @@ Latency was measured on a local Mac (Apple M5, 16 GB RAM) while other applicatio
 | IVF-PQ (16 B) | 141 MiB |
 | IVF-PQ (32 B) | 45 MiB |
 | IVF-PQ (64 B) | 9 MiB |
+
+Some swapping occurred, which can inflate latency.
 
 Measured latencies were not modified, corrected or filtered. Absolute latencies should be interpreted with care; the comparison between indexes is the more reliable signal.
 
