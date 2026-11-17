@@ -10,16 +10,16 @@ __pycache__/
 
 # Experiment outputs are regenerated locally. The measurements behind the report are
 # versioned (small CSV/JSON) so every figure and table can be rebuilt without re-running:
-#   gist1m_20261110_003629 / _004019  final watgpu runs (main + repeat)
+#   gist1m_20261117_200743 / _201058  final watgpu runs (main + repeat), job 1700800
 #   gist1m_20261102_151830 / _151037  earlier Mac runs (results/figures/final/)
 results/raw/*
 results/summary/*
-!results/raw/gist1m_20261110_003629_*
-!results/raw/gist1m_20261110_004019_*
+!results/raw/gist1m_20261117_200743_*
+!results/raw/gist1m_20261117_201058_*
 !results/raw/gist1m_20261102_151830_*
 !results/raw/gist1m_20261102_151037_*
-!results/summary/gist1m_20261110_003629_*
-!results/summary/gist1m_20261110_004019_*
+!results/summary/gist1m_20261117_200743_*
+!results/summary/gist1m_20261117_201058_*
 !results/summary/gist1m_20261102_151830_summary.csv
 !results/summary/gist1m_20261102_151830_vs_ivfflat.csv
 !results/summary/gist1m_20261102_151830_recall_matched.csv

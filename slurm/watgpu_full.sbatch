@@ -2,7 +2,7 @@
 #SBATCH --job-name=ivfpq_full
 #SBATCH --partition=ALL
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=16
 #SBATCH --mem=48G
 #SBATCH --time=12:00:00
 #SBATCH --output=logs/ivfpq_full_%j.out
@@ -14,8 +14,9 @@
 #   4. Exact-1NN Hit@R, error attribution (coverage vs PQ ranking, rerank), resident memory
 #   5. OPQ confirmation experiment (appendix)
 #   6. report figures and tables -> results/figures/final_watgpu, results/summary
-# FAISS uses 4 threads (config) inside an 8-CPU allocation, so OS/other work does not
-# compete with the timed threads.
+# FAISS uses 4 threads (config) inside a 16-CPU allocation (8 physical cores with their
+# hyper-thread siblings). The threads are pinned one per physical core, so two timed
+# threads never share a core, and the spare cores absorb OS / Python work.
 set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
 
@@ -27,9 +28,22 @@ mkdir -p "$PYDIR" "$TMPDIR" logs
 pip3 install --quiet --target="$PYDIR" -r requirements.txt
 export PYTHONPATH="$PYDIR"
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+export OMP_PLACES=cores OMP_PROC_BIND=spread OMP_DISPLAY_ENV=true
 PY="python3 -u"
 
-echo "== node $(hostname), $(nproc) CPUs visible, $(date)"
+echo "== node $(hostname), $(date)"
+echo "allocated CPUs: $(grep Cpus_allowed_list /proc/self/status | cut -f2)"
+lscpu -p=CPU,CORE,SOCKET | grep -v '^#' > "$TMPDIR/topo.csv"
+python3 - "$TMPDIR/topo.csv" <<'PYEOF'
+import os, sys
+alloc = os.sched_getaffinity(0)
+cores = {}
+for line in open(sys.argv[1]):
+    cpu, core, sock = map(int, line.strip().split(","))
+    if cpu in alloc:
+        cores.setdefault((sock, core), []).append(cpu)
+print(f"physical cores in allocation: {len(cores)}  (logical CPUs: {len(alloc)})")
+PYEOF
 lscpu | grep -E "Model name|^CPU\(s\)|Thread|Socket" || true
 free -g
 

@@ -57,9 +57,10 @@ All experiment settings live in `config/default.yaml`.
 
 ### Final runs (watgpu) and diagnostics
 
-**The report numbers come from watgpu**, not the Mac: run `gist1m_20261110_003629`
-(repeat `gist1m_20261110_004019`), node watgpu208 (Xeon Gold 5415+), 4 FAISS threads,
-SLURM job 1681750 (`slurm/watgpu_full.sbatch`). Figures: `results/figures/final_watgpu/`.
+**The report numbers come from watgpu**, not the Mac: run `gist1m_20261117_200743`
+(repeat `gist1m_20261117_201058`), node watgpu802 (Intel Xeon 6960P), 16-CPU allocation
+(8 physical cores) with the 4 FAISS threads pinned one per physical core,
+SLURM job 1700800 (`slurm/watgpu_full.sbatch`). Figures: `results/figures/final_watgpu/`.
 `docs/report_notes.md` lists the deviations from the proposal, the scope of each result
 and where every reported number lives.
 

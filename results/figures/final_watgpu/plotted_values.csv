@@ -16,69 +16,69 @@ recall10_vs_nprobe,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10
 recall10_vs_nprobe,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10
 recall10_vs_nprobe,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10
 recall10_vs_p95_latency,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-Flat,1,latency_p95_ms,0.8811197499999994,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,IVF-Flat,1,latency_p95_ms,0.8567721499999998,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-Flat,4,latency_p95_ms,3.0344614499999993,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,IVF-Flat,4,latency_p95_ms,2.803036199999998,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-Flat,16,latency_p95_ms,10.5302592,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,IVF-Flat,16,latency_p95_ms,9.78612145,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-Flat,32,latency_p95_ms,19.4203568,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,IVF-Flat,32,latency_p95_ms,17.79220565,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-16,1,recall_at_10,0.1178,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-16,1,latency_p95_ms,0.2644090999999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,1,latency_p95_ms,0.22759005,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-16,4,recall_at_10,0.1624,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-16,4,latency_p95_ms,0.3477143,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,4,latency_p95_ms,0.2798754,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-16,16,recall_at_10,0.1749,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-16,16,latency_p95_ms,0.4428491,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,16,latency_p95_ms,0.4493827999999999,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-16,32,recall_at_10,0.177,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-16,32,latency_p95_ms,0.6499224,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,32,latency_p95_ms,0.64741825,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-32,1,recall_at_10,0.1528,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-32,1,latency_p95_ms,0.2213151,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,1,latency_p95_ms,0.2491298499999999,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-32,4,recall_at_10,0.2309,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-32,4,latency_p95_ms,0.30472525,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,4,latency_p95_ms,0.3236073499999999,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-32,16,recall_at_10,0.2626,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-32,16,latency_p95_ms,0.7626384999999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,16,latency_p95_ms,0.5764674999999998,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-32,32,recall_at_10,0.2662,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-32,32,latency_p95_ms,0.94845755,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,32,latency_p95_ms,0.8696150500000001,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-64,1,recall_at_10,0.1815,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-64,1,latency_p95_ms,0.2781148999999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,1,latency_p95_ms,0.30671925,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-64,4,latency_p95_ms,0.4333149499999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,4,latency_p95_ms,0.44957355,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-64,16,latency_p95_ms,0.9699351,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,16,latency_p95_ms,0.9254418,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,PQ-64,32,latency_p95_ms,2.1601769500000003,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,32,latency_p95_ms,1.4727247,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p50_latency,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-Flat,1,latency_p50_ms,0.458046,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,IVF-Flat,1,latency_p50_ms,0.4671079999999999,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-Flat,4,latency_p50_ms,1.5547715,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,IVF-Flat,4,latency_p50_ms,1.4808210000000002,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-Flat,16,latency_p50_ms,6.0163245,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,IVF-Flat,16,latency_p50_ms,5.6811105,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-Flat,32,latency_p50_ms,12.3264595,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,IVF-Flat,32,latency_p50_ms,11.439283,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-16,1,recall_at_10,0.1178,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-16,1,latency_p50_ms,0.235665,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,1,latency_p50_ms,0.21266,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-16,4,recall_at_10,0.1624,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-16,4,latency_p50_ms,0.2831504999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,4,latency_p50_ms,0.2429,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-16,16,recall_at_10,0.1749,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-16,16,latency_p50_ms,0.3350615,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,16,latency_p50_ms,0.3490145,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-16,32,recall_at_10,0.177,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-16,32,latency_p50_ms,0.4990139999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,32,latency_p50_ms,0.4930405,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-32,1,recall_at_10,0.1528,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-32,1,latency_p50_ms,0.2003075,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,1,latency_p50_ms,0.2296695,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-32,4,recall_at_10,0.2309,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-32,4,latency_p50_ms,0.249743,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,4,latency_p50_ms,0.273837,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-32,16,recall_at_10,0.2626,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-32,16,latency_p50_ms,0.511625,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,16,latency_p50_ms,0.434173,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-32,32,recall_at_10,0.2662,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-32,32,latency_p50_ms,0.719422,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,32,latency_p50_ms,0.6506510000000001,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-64,1,recall_at_10,0.1815,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-64,1,latency_p50_ms,0.2402825,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,1,latency_p50_ms,0.274187,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-64,4,latency_p50_ms,0.3344264999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,4,latency_p50_ms,0.358936,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-64,16,latency_p50_ms,0.6966034999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,16,latency_p50_ms,0.6666455,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,PQ-64,32,latency_p50_ms,1.574973,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,32,latency_p50_ms,1.07897,summary.recall_at_10 / summary.latency_p50_ms
 index_size,IVF-Flat,,serialized_size_bytes,3851940491.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
 index_size,IVF-Flat,,compression_ratio_vs_ivfflat,1.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
 index_size,PQ-16,,serialized_size_bytes,28923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
@@ -119,22 +119,22 @@ recall10_vs_memory,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10 / serialize
 recall10_vs_memory,PQ-64,16,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
 recall10_vs_memory,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / serialized_size_bytes
 recall10_vs_memory,PQ-64,32,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
-qps_vs_nprobe,IVF-Flat,1,qps,5232.205707765112,summary.qps (median of reps)
-qps_vs_nprobe,IVF-Flat,4,qps,1610.097454398416,summary.qps (median of reps)
-qps_vs_nprobe,IVF-Flat,16,qps,430.26084075572345,summary.qps (median of reps)
-qps_vs_nprobe,IVF-Flat,32,qps,220.04641994553083,summary.qps (median of reps)
-qps_vs_nprobe,PQ-16,1,qps,16956.083269657876,summary.qps (median of reps)
-qps_vs_nprobe,PQ-16,4,qps,12201.071163789851,summary.qps (median of reps)
-qps_vs_nprobe,PQ-16,16,qps,7223.326287683452,summary.qps (median of reps)
-qps_vs_nprobe,PQ-16,32,qps,5529.985639330706,summary.qps (median of reps)
-qps_vs_nprobe,PQ-32,1,qps,13153.680367372212,summary.qps (median of reps)
-qps_vs_nprobe,PQ-32,4,qps,11174.739206515544,summary.qps (median of reps)
-qps_vs_nprobe,PQ-32,16,qps,5600.497118024808,summary.qps (median of reps)
-qps_vs_nprobe,PQ-32,32,qps,3275.0777031428174,summary.qps (median of reps)
-qps_vs_nprobe,PQ-64,1,qps,10344.064800574874,summary.qps (median of reps)
-qps_vs_nprobe,PQ-64,4,qps,6496.810670156408,summary.qps (median of reps)
-qps_vs_nprobe,PQ-64,16,qps,3304.031966432856,summary.qps (median of reps)
-qps_vs_nprobe,PQ-64,32,qps,1828.445364048637,summary.qps (median of reps)
+qps_vs_nprobe,IVF-Flat,1,qps,9285.359191603166,summary.qps (median of reps)
+qps_vs_nprobe,IVF-Flat,4,qps,2502.734627549316,summary.qps (median of reps)
+qps_vs_nprobe,IVF-Flat,16,qps,655.0018780030488,summary.qps (median of reps)
+qps_vs_nprobe,IVF-Flat,32,qps,330.0335355860887,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,1,qps,41147.8198061648,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,4,qps,30730.3990756569,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,16,qps,16429.251889485462,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,32,qps,10084.545187916116,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,1,qps,32671.54078546907,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,4,qps,23514.89185076704,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,16,qps,11647.353840175903,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,32,qps,7102.756484523725,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,1,qps,23981.929715670867,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,4,qps,15494.404251601662,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,16,qps,6929.408010051374,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,32,qps,4075.250228816368,summary.qps (median of reps)
 exact1nn_hit100(a),IVF-Flat,1,exact1nn_hit_at_100,0.297,exact1nn_hit100.exact1nn_hit_at_100
 exact1nn_hit100(a),IVF-Flat,4,exact1nn_hit_at_100,0.581,exact1nn_hit100.exact1nn_hit_at_100
 exact1nn_hit100(a),IVF-Flat,16,exact1nn_hit_at_100,0.855,exact1nn_hit100.exact1nn_hit_at_100
@@ -163,67 +163,67 @@ pq_code_size_vs_recall,PQ-32,32,pq_code_bytes,32.0,summary.pq_code_bytes / recal
 pq_code_size_vs_recall,PQ-32,32,recall_at_10,0.2662,summary.pq_code_bytes / recall_at_10
 pq_code_size_vs_recall,PQ-64,32,pq_code_bytes,64.0,summary.pq_code_bytes / recall_at_10
 pq_code_size_vs_recall,PQ-64,32,recall_at_10,0.3617,summary.pq_code_bytes / recall_at_10
-latency_stability_p50,IVF-Flat,1,latency_p50_ms,0.458046,summary of both runs
-latency_stability_p50,IVF-Flat,1,latency_p50_ms_cmp,0.502332,summary of both runs
-latency_stability_p50,IVF-Flat,4,latency_p50_ms,1.5547715,summary of both runs
-latency_stability_p50,IVF-Flat,4,latency_p50_ms_cmp,1.6980635,summary of both runs
-latency_stability_p50,IVF-Flat,16,latency_p50_ms,6.0163245,summary of both runs
-latency_stability_p50,IVF-Flat,16,latency_p50_ms_cmp,6.2796485,summary of both runs
-latency_stability_p50,IVF-Flat,32,latency_p50_ms,12.3264595,summary of both runs
-latency_stability_p50,IVF-Flat,32,latency_p50_ms_cmp,12.2074685,summary of both runs
-latency_stability_p50,PQ-16,1,latency_p50_ms,0.235665,summary of both runs
-latency_stability_p50,PQ-16,1,latency_p50_ms_cmp,0.184582,summary of both runs
-latency_stability_p50,PQ-16,4,latency_p50_ms,0.2831504999999999,summary of both runs
-latency_stability_p50,PQ-16,4,latency_p50_ms_cmp,0.223555,summary of both runs
-latency_stability_p50,PQ-16,16,latency_p50_ms,0.3350615,summary of both runs
-latency_stability_p50,PQ-16,16,latency_p50_ms_cmp,0.345821,summary of both runs
-latency_stability_p50,PQ-16,32,latency_p50_ms,0.4990139999999999,summary of both runs
-latency_stability_p50,PQ-16,32,latency_p50_ms_cmp,0.491067,summary of both runs
-latency_stability_p50,PQ-32,1,latency_p50_ms,0.2003075,summary of both runs
-latency_stability_p50,PQ-32,1,latency_p50_ms_cmp,0.2694155,summary of both runs
-latency_stability_p50,PQ-32,4,latency_p50_ms,0.249743,summary of both runs
-latency_stability_p50,PQ-32,4,latency_p50_ms_cmp,0.2671225,summary of both runs
-latency_stability_p50,PQ-32,16,latency_p50_ms,0.511625,summary of both runs
-latency_stability_p50,PQ-32,16,latency_p50_ms_cmp,0.4705525,summary of both runs
-latency_stability_p50,PQ-32,32,latency_p50_ms,0.719422,summary of both runs
-latency_stability_p50,PQ-32,32,latency_p50_ms_cmp,0.9342415,summary of both runs
-latency_stability_p50,PQ-64,1,latency_p50_ms,0.2402825,summary of both runs
-latency_stability_p50,PQ-64,1,latency_p50_ms_cmp,0.298072,summary of both runs
-latency_stability_p50,PQ-64,4,latency_p50_ms,0.3344264999999999,summary of both runs
-latency_stability_p50,PQ-64,4,latency_p50_ms_cmp,0.362147,summary of both runs
-latency_stability_p50,PQ-64,16,latency_p50_ms,0.6966034999999999,summary of both runs
-latency_stability_p50,PQ-64,16,latency_p50_ms_cmp,0.744585,summary of both runs
-latency_stability_p50,PQ-64,32,latency_p50_ms,1.574973,summary of both runs
-latency_stability_p50,PQ-64,32,latency_p50_ms_cmp,1.252491,summary of both runs
-latency_stability_p95,IVF-Flat,1,latency_p95_ms,0.8811197499999994,summary of both runs
-latency_stability_p95,IVF-Flat,1,latency_p95_ms_cmp,1.2941465999999993,summary of both runs
-latency_stability_p95,IVF-Flat,4,latency_p95_ms,3.0344614499999993,summary of both runs
-latency_stability_p95,IVF-Flat,4,latency_p95_ms_cmp,3.8011054499999983,summary of both runs
-latency_stability_p95,IVF-Flat,16,latency_p95_ms,10.5302592,summary of both runs
-latency_stability_p95,IVF-Flat,16,latency_p95_ms_cmp,10.8983868,summary of both runs
-latency_stability_p95,IVF-Flat,32,latency_p95_ms,19.4203568,summary of both runs
-latency_stability_p95,IVF-Flat,32,latency_p95_ms_cmp,19.1025224,summary of both runs
-latency_stability_p95,PQ-16,1,latency_p95_ms,0.2644090999999999,summary of both runs
-latency_stability_p95,PQ-16,1,latency_p95_ms_cmp,0.20247645,summary of both runs
-latency_stability_p95,PQ-16,4,latency_p95_ms,0.3477143,summary of both runs
-latency_stability_p95,PQ-16,4,latency_p95_ms_cmp,0.2656488999999999,summary of both runs
-latency_stability_p95,PQ-16,16,latency_p95_ms,0.4428491,summary of both runs
-latency_stability_p95,PQ-16,16,latency_p95_ms_cmp,0.45703835,summary of both runs
-latency_stability_p95,PQ-16,32,latency_p95_ms,0.6499224,summary of both runs
-latency_stability_p95,PQ-16,32,latency_p95_ms_cmp,0.6461079000000001,summary of both runs
-latency_stability_p95,PQ-32,1,latency_p95_ms,0.2213151,summary of both runs
-latency_stability_p95,PQ-32,1,latency_p95_ms_cmp,0.3041704,summary of both runs
-latency_stability_p95,PQ-32,4,latency_p95_ms,0.30472525,summary of both runs
-latency_stability_p95,PQ-32,4,latency_p95_ms_cmp,0.3271775999999999,summary of both runs
-latency_stability_p95,PQ-32,16,latency_p95_ms,0.7626384999999999,summary of both runs
-latency_stability_p95,PQ-32,16,latency_p95_ms_cmp,0.6325951999999999,summary of both runs
-latency_stability_p95,PQ-32,32,latency_p95_ms,0.94845755,summary of both runs
-latency_stability_p95,PQ-32,32,latency_p95_ms_cmp,1.2540378,summary of both runs
-latency_stability_p95,PQ-64,1,latency_p95_ms,0.2781148999999999,summary of both runs
-latency_stability_p95,PQ-64,1,latency_p95_ms_cmp,0.3726396999999999,summary of both runs
-latency_stability_p95,PQ-64,4,latency_p95_ms,0.4333149499999999,summary of both runs
-latency_stability_p95,PQ-64,4,latency_p95_ms_cmp,0.4755871499999999,summary of both runs
-latency_stability_p95,PQ-64,16,latency_p95_ms,0.9699351,summary of both runs
-latency_stability_p95,PQ-64,16,latency_p95_ms_cmp,1.0435839,summary of both runs
-latency_stability_p95,PQ-64,32,latency_p95_ms,2.1601769500000003,summary of both runs
-latency_stability_p95,PQ-64,32,latency_p95_ms_cmp,1.69211035,summary of both runs
+latency_stability_p50,IVF-Flat,1,latency_p50_ms,0.4671079999999999,summary of both runs
+latency_stability_p50,IVF-Flat,1,latency_p50_ms_cmp,0.507294,summary of both runs
+latency_stability_p50,IVF-Flat,4,latency_p50_ms,1.4808210000000002,summary of both runs
+latency_stability_p50,IVF-Flat,4,latency_p50_ms_cmp,1.704144,summary of both runs
+latency_stability_p50,IVF-Flat,16,latency_p50_ms,5.6811105,summary of both runs
+latency_stability_p50,IVF-Flat,16,latency_p50_ms_cmp,6.1665515,summary of both runs
+latency_stability_p50,IVF-Flat,32,latency_p50_ms,11.439283,summary of both runs
+latency_stability_p50,IVF-Flat,32,latency_p50_ms_cmp,12.1457525,summary of both runs
+latency_stability_p50,PQ-16,1,latency_p50_ms,0.21266,summary of both runs
+latency_stability_p50,PQ-16,1,latency_p50_ms_cmp,0.211674,summary of both runs
+latency_stability_p50,PQ-16,4,latency_p50_ms,0.2429,summary of both runs
+latency_stability_p50,PQ-16,4,latency_p50_ms_cmp,0.2421875,summary of both runs
+latency_stability_p50,PQ-16,16,latency_p50_ms,0.3490145,summary of both runs
+latency_stability_p50,PQ-16,16,latency_p50_ms_cmp,0.3492105,summary of both runs
+latency_stability_p50,PQ-16,32,latency_p50_ms,0.4930405,summary of both runs
+latency_stability_p50,PQ-16,32,latency_p50_ms_cmp,0.526659,summary of both runs
+latency_stability_p50,PQ-32,1,latency_p50_ms,0.2296695,summary of both runs
+latency_stability_p50,PQ-32,1,latency_p50_ms_cmp,0.226954,summary of both runs
+latency_stability_p50,PQ-32,4,latency_p50_ms,0.273837,summary of both runs
+latency_stability_p50,PQ-32,4,latency_p50_ms_cmp,0.2716155,summary of both runs
+latency_stability_p50,PQ-32,16,latency_p50_ms,0.434173,summary of both runs
+latency_stability_p50,PQ-32,16,latency_p50_ms_cmp,0.4315115,summary of both runs
+latency_stability_p50,PQ-32,32,latency_p50_ms,0.6506510000000001,summary of both runs
+latency_stability_p50,PQ-32,32,latency_p50_ms_cmp,0.6463814999999999,summary of both runs
+latency_stability_p50,PQ-64,1,latency_p50_ms,0.274187,summary of both runs
+latency_stability_p50,PQ-64,1,latency_p50_ms_cmp,0.273278,summary of both runs
+latency_stability_p50,PQ-64,4,latency_p50_ms,0.358936,summary of both runs
+latency_stability_p50,PQ-64,4,latency_p50_ms_cmp,0.3646895,summary of both runs
+latency_stability_p50,PQ-64,16,latency_p50_ms,0.6666455,summary of both runs
+latency_stability_p50,PQ-64,16,latency_p50_ms_cmp,0.7028475000000001,summary of both runs
+latency_stability_p50,PQ-64,32,latency_p50_ms,1.07897,summary of both runs
+latency_stability_p50,PQ-64,32,latency_p50_ms_cmp,1.075711,summary of both runs
+latency_stability_p95,IVF-Flat,1,latency_p95_ms,0.8567721499999998,summary of both runs
+latency_stability_p95,IVF-Flat,1,latency_p95_ms_cmp,1.3264213999999996,summary of both runs
+latency_stability_p95,IVF-Flat,4,latency_p95_ms,2.803036199999998,summary of both runs
+latency_stability_p95,IVF-Flat,4,latency_p95_ms_cmp,3.637868199999999,summary of both runs
+latency_stability_p95,IVF-Flat,16,latency_p95_ms,9.78612145,summary of both runs
+latency_stability_p95,IVF-Flat,16,latency_p95_ms_cmp,10.584112899999996,summary of both runs
+latency_stability_p95,IVF-Flat,32,latency_p95_ms,17.79220565,summary of both runs
+latency_stability_p95,IVF-Flat,32,latency_p95_ms_cmp,18.91076925,summary of both runs
+latency_stability_p95,PQ-16,1,latency_p95_ms,0.22759005,summary of both runs
+latency_stability_p95,PQ-16,1,latency_p95_ms_cmp,0.2259585999999999,summary of both runs
+latency_stability_p95,PQ-16,4,latency_p95_ms,0.2798754,summary of both runs
+latency_stability_p95,PQ-16,4,latency_p95_ms_cmp,0.2788393999999999,summary of both runs
+latency_stability_p95,PQ-16,16,latency_p95_ms,0.4493827999999999,summary of both runs
+latency_stability_p95,PQ-16,16,latency_p95_ms_cmp,0.44920025,summary of both runs
+latency_stability_p95,PQ-16,32,latency_p95_ms,0.64741825,summary of both runs
+latency_stability_p95,PQ-16,32,latency_p95_ms_cmp,0.8388383999999993,summary of both runs
+latency_stability_p95,PQ-32,1,latency_p95_ms,0.2491298499999999,summary of both runs
+latency_stability_p95,PQ-32,1,latency_p95_ms_cmp,0.2464118,summary of both runs
+latency_stability_p95,PQ-32,4,latency_p95_ms,0.3236073499999999,summary of both runs
+latency_stability_p95,PQ-32,4,latency_p95_ms_cmp,0.3231108,summary of both runs
+latency_stability_p95,PQ-32,16,latency_p95_ms,0.5764674999999998,summary of both runs
+latency_stability_p95,PQ-32,16,latency_p95_ms_cmp,0.57490275,summary of both runs
+latency_stability_p95,PQ-32,32,latency_p95_ms,0.8696150500000001,summary of both runs
+latency_stability_p95,PQ-32,32,latency_p95_ms_cmp,0.8688471499999998,summary of both runs
+latency_stability_p95,PQ-64,1,latency_p95_ms,0.30671925,summary of both runs
+latency_stability_p95,PQ-64,1,latency_p95_ms_cmp,0.3043380499999999,summary of both runs
+latency_stability_p95,PQ-64,4,latency_p95_ms,0.44957355,summary of both runs
+latency_stability_p95,PQ-64,4,latency_p95_ms_cmp,0.4598908499999999,summary of both runs
+latency_stability_p95,PQ-64,16,latency_p95_ms,0.9254418,summary of both runs
+latency_stability_p95,PQ-64,16,latency_p95_ms_cmp,1.02385675,summary of both runs
+latency_stability_p95,PQ-64,32,latency_p95_ms,1.4727247,summary of both runs
+latency_stability_p95,PQ-64,32,latency_p95_ms_cmp,1.45631725,summary of both runs

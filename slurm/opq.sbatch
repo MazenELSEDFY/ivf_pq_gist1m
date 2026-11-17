@@ -11,7 +11,7 @@
 # Usage: sbatch slurm/opq.sbatch [RUN_ID]
 set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
-RUN=${1:-gist1m_20261110_003629}
+RUN=${1:-gist1m_20261117_200743}
 
 PYDIR=/tmp/ivfopq_py_${SLURM_JOB_ID}
 export TMPDIR=/tmp/ivfopq_tmp_${SLURM_JOB_ID}

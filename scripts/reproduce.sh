@@ -18,8 +18,8 @@ PY=${PYTHON:-$([ -x .venv/bin/python ] && echo .venv/bin/python || echo python3)
 export OMP_NUM_THREADS=${OMP_NUM_THREADS:-4} OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 
 # Runs reported in docs/report_notes.md
-MAIN=gist1m_20261110_003629      # watgpu main run
-REPEAT=gist1m_20261110_004019    # watgpu independent repeat
+MAIN=gist1m_20261117_200743      # watgpu main run
+REPEAT=gist1m_20261117_201058    # watgpu independent repeat
 MAC=gist1m_20261102_151830       # earlier Mac run
 MAC_REPEAT=gist1m_20261102_151037
 

@@ -1,19 +1,19 @@
 {
-  "run_id": "gist1m_20261110_003629",
-  "timestamp": "2026-11-10T00:40:14",
+  "run_id": "gist1m_20261117_200743",
+  "timestamp": "2026-11-17T20:10:54",
   "python_version": "3.10.12",
   "faiss_version": "1.15.1",
   "numpy_version": "2.2.6",
   "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.35",
-  "hostname": "watgpu208",
-  "slurm_job_id": "1681750",
-  "slurm_cpus": "8",
+  "hostname": "watgpu802",
+  "slurm_job_id": "1700800",
+  "slurm_cpus": "16",
   "cpu": {
     "machine": "x86_64",
     "processor": "x86_64",
-    "logical_cpus": 32,
-    "model_name": "Intel(R) Xeon(R) Gold 5415+",
-    "total_ram_bytes": 651999997952
+    "logical_cpus": 288,
+    "model_name": "Intel(R) Xeon(R) 6960P",
+    "total_ram_bytes": 429496729600
   },
   "faiss_threads": 4,
   "git_commit": "04a7705b8b8d53adac9c225f236c738f9cdf4d01",
@@ -103,10 +103,10 @@
     "n_query": 1000,
     "gt_k": 100,
     "paths": {
-      "base": "data/gist1m/gist_base.fvecs",
-      "learn": "data/gist1m/gist_learn.fvecs",
-      "query": "data/gist1m/gist_query.fvecs",
-      "groundtruth": "data/gist1m/gist_groundtruth.ivecs"
+      "base": "/u801/melsedfy/ivf_pq_gist1m/data/gist1m/gist_base.fvecs",
+      "learn": "/u801/melsedfy/ivf_pq_gist1m/data/gist1m/gist_learn.fvecs",
+      "query": "/u801/melsedfy/ivf_pq_gist1m/data/gist1m/gist_query.fvecs",
+      "groundtruth": "/u801/melsedfy/ivf_pq_gist1m/data/gist1m/gist_groundtruth.ivecs"
     },
     "file_sizes": {
       "base": 3844000000,
@@ -132,10 +132,10 @@
     32
   ],
   "outputs": {
-    "indexes": "results/raw/gist1m_20261110_003629_indexes.csv",
-    "recall": "results/raw/gist1m_20261110_003629_recall.csv",
-    "throughput": "results/raw/gist1m_20261110_003629_throughput.csv",
-    "latency": "results/raw/gist1m_20261110_003629_latency.csv.gz",
-    "metadata": "results/raw/gist1m_20261110_003629_metadata.json"
+    "indexes": "/u801/melsedfy/ivf_pq_gist1m/results/raw/gist1m_20261117_200743_indexes.csv",
+    "recall": "/u801/melsedfy/ivf_pq_gist1m/results/raw/gist1m_20261117_200743_recall.csv",
+    "throughput": "/u801/melsedfy/ivf_pq_gist1m/results/raw/gist1m_20261117_200743_throughput.csv",
+    "latency": "/u801/melsedfy/ivf_pq_gist1m/results/raw/gist1m_20261117_200743_latency.csv.gz",
+    "metadata": "/u801/melsedfy/ivf_pq_gist1m/results/raw/gist1m_20261117_200743_metadata.json"
   }
 }

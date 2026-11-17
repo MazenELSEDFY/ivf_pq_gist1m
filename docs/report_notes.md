@@ -1,8 +1,11 @@
 # Report notes: proposal, feedback, deviations
 
 Checklist for the final report, written after the watgpu runs. Final numbers come from
-run `gist1m_20261110_003629` (repeat: `gist1m_20261110_004019`) on watgpu208,
-Intel Xeon Gold 5415+, FAISS 1.15.1, 4 OpenMP threads, SLURM job 1681750.
+run `gist1m_20261117_200743` (repeat: `gist1m_20261117_201058`) on watgpu802,
+Intel Xeon 6960P, FAISS 1.15.1, 4 OpenMP threads pinned one per physical core in a 16-CPU
+allocation, SLURM job 1700800. The two runs agree to a median 1.0% (p50) / 1.1% (p95).
+(An earlier unpinned run, `gist1m_20261110_003629` on watgpu208, had identical recall but
+9% / 20% run-to-run latency noise; it is superseded.)
 Do not mix in the Mac runs of 2 Nov (`results/figures/final/`): recall matches,
 latency does not.
 
@@ -45,18 +48,19 @@ latency does not.
 4. **Proof it is ranking, not candidates:** exact re-scoring of PQ's top-1000 on the same
    pool gives 0.873 / 0.963 / 0.992 at nprobe 1024 (M = 16 / 32 / 64).
 5. **Matched recall, proposal scope** (`*_matched_recall_v2.csv`, scope = proposal):
-   achievable only up to Recall@10 ~0.36. At 0.2: PQ32 nprobe 4 is 2.4x Flat's QPS;
-   at 0.3: PQ64 nprobe 8 is 2.0x. No plain-PQ point reaches 0.5.
+   achievable only up to Recall@10 ~0.36. At 0.2: PQ32 nprobe 4 is 2.9x Flat's QPS;
+   at 0.3: PQ64 nprobe 8 is 2.5x. No plain-PQ point reaches 0.5.
 6. **Frontier** (Sec. 3.4; `frontier.*`, `*_frontier.csv`, `*_memory_budget.csv`):
    with three objectives 15/16 points are non-dominated; the one dominated point is
    IVF-Flat nprobe 1 (beaten by PQ64 nprobe 4 on recall, p95 and size). On recall vs p95
-   latency PQ16 is never on the frontier, PQ32 only at nprobe 1-4, PQ64 from there to
-   ~2 ms, then IVF-Flat. Answer to Sec. 3.3: the 64-byte code is worth its 2x storage
-   over 32 bytes; the 16-byte code is not worth its extra compression.
+   latency PQ16 and PQ32 are on the frontier only at nprobe 1-4 (lowest-latency end,
+   Recall@10 <= 0.23), PQ64 from there to ~1.5 ms, then IVF-Flat. Answer to Sec. 3.3: the 64-byte code is worth its 2x storage
+   over 32 bytes; the 16-byte code is only competitive at the lowest-recall end.
 
 ## Threats to validity to keep
 
-GIST1M descriptors and L2 only; nlist fixed at 1024; 4 threads may share physical cores
-via hyper-threading on watgpu; matched-recall QPS for re-rank uses a single-threaded NumPy
+GIST1M descriptors and L2 only; nlist fixed at 1024; shared cluster node (threads pinned to
+dedicated physical cores, memory bandwidth still shared; 3/16 configurations 20-35% slower in
+p95 in the repeat run); matched-recall QPS for re-rank uses a single-threaded NumPy
 re-rank loop (conservative); latency on a shared cluster node (two runs agree, see
 `latency_stability.*`).
