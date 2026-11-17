@@ -20,7 +20,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from src.plotting import FLAT_COLOR, INK, INK2, PQ_MARKERS, PQ_RAMP, _end_label, _nprobe_axis, _save
+from src.plotting import (FLAT_COLOR, INK, INK2, PQ_MARKERS, PQ_RAMP, _end_label, _nprobe_axis,
+                          _readable_log, _save)
 from src.utils import resolve
 
 TARGETS = [0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]
@@ -124,26 +125,30 @@ def main(argv=None):
     _save(fig, out, "error_attribution")
     plt.close(fig)
 
-    # ---- figure: recall vs QPS (matched-recall view) ---------------------------------
+    # ---- figure: recall vs QPS (matched-recall view), one panel per code size ---------
     if df.qps.notna().any():
-        fig, ax = plt.subplots(figsize=(5.2, 3.6))
-        ax.plot(flat.qps, flat.recall_at_10, color=FLAT_COLOR, marker="s", markeredgecolor="white",
-                label="IVF-Flat")
-        _end_label(ax, flat.qps.iloc[-1], flat.recall_at_10.iloc[-1], "Flat", INK2)
-        for m, col, mk in zip(ms, PQ_RAMP, PQ_MARKERS):
+        fig, axes = plt.subplots(1, len(ms), figsize=(3.1 * len(ms), 3.0), sharey=True, sharex=True)
+        for ax, m, col, mk in zip(np.atleast_1d(axes), ms, PQ_RAMP, PQ_MARKERS):
+            ax.plot(flat.qps, flat.recall_at_10, color=FLAT_COLOR, marker="s", ms=4,
+                    markeredgecolor="white", lw=1.6, label="IVF-Flat")
             sub = pq[pq.pq_m == m]
             b = sub[sub.rerank_R == 0].sort_values("nprobe")
-            ax.plot(b.qps, b.recall_at_10, color=col, marker=mk, markeredgecolor="white",
-                    lw=1.2, label=f"PQ{m}")
+            ax.plot(b.qps, b.recall_at_10, color=col, marker=mk, ms=4, markeredgecolor="white",
+                    lw=1.6, label="PQ")
             for r in Rs:
-                s = sub[sub.rerank_R == r].sort_values("nprobe")
-                ax.plot(s.qps, s.recall_at_10, color=col, ls=ls_r.get(r, "-."), marker=mk, ms=4,
-                        lw=1.2, label=f"PQ{m} + rerank {r}")
-        ax.set_xscale("log")
-        ax.set_xlabel("Throughput (queries/s, batch, 4 threads)")
-        ax.set_ylabel("Recall@10")
-        ax.set_ylim(0, 1.02)
-        ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5), frameon=False)
+                s_ = sub[sub.rerank_R == r].sort_values("nprobe")
+                ax.plot(s_.qps, s_.recall_at_10, color=col, ls=ls_r.get(r, "-."), lw=1.4,
+                        label=f"PQ + exact rerank of top {r}")
+            ax.set_xscale("log")
+            _readable_log(ax.xaxis, subs=(1.0,))
+            ax.set_title(f"IVF-PQ M={m} ({m} B/vector)", color=INK)
+            ax.set_xlabel("Queries/s (batch, 4 threads)")
+            ax.set_ylim(0, 1.02)
+        np.atleast_1d(axes)[0].set_ylabel("Recall@10")
+        h, lab = np.atleast_1d(axes)[0].get_legend_handles_labels()
+        fig.legend(h, lab, loc="lower center", ncol=len(lab), frameon=False,
+                   bbox_to_anchor=(0.5, -0.08))
+        fig.tight_layout()
         _save(fig, out, "recall_vs_qps_rerank")
         plt.close(fig)
 
