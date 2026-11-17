@@ -3,18 +3,18 @@ recall10_vs_nprobe,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10
 recall10_vs_nprobe,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10
 recall10_vs_nprobe,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.recall_at_10
 recall10_vs_nprobe,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (16 B),1,recall_at_10,0.1178,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (16 B),4,recall_at_10,0.1624,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (16 B),16,recall_at_10,0.1749,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (16 B),32,recall_at_10,0.177,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (32 B),1,recall_at_10,0.1528,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (32 B),4,recall_at_10,0.2309,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (32 B),16,recall_at_10,0.2626,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (32 B),32,recall_at_10,0.2662,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (64 B),1,recall_at_10,0.1815,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (64 B),4,recall_at_10,0.2971,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (64 B),16,recall_at_10,0.3535,summary.recall_at_10
-recall10_vs_nprobe,IVF-PQ (64 B),32,recall_at_10,0.3617,summary.recall_at_10
+recall10_vs_nprobe,PQ-16,1,recall_at_10,0.1178,summary.recall_at_10
+recall10_vs_nprobe,PQ-16,4,recall_at_10,0.1624,summary.recall_at_10
+recall10_vs_nprobe,PQ-16,16,recall_at_10,0.1749,summary.recall_at_10
+recall10_vs_nprobe,PQ-16,32,recall_at_10,0.177,summary.recall_at_10
+recall10_vs_nprobe,PQ-32,1,recall_at_10,0.1528,summary.recall_at_10
+recall10_vs_nprobe,PQ-32,4,recall_at_10,0.2309,summary.recall_at_10
+recall10_vs_nprobe,PQ-32,16,recall_at_10,0.2626,summary.recall_at_10
+recall10_vs_nprobe,PQ-32,32,recall_at_10,0.2662,summary.recall_at_10
+recall10_vs_nprobe,PQ-64,1,recall_at_10,0.1815,summary.recall_at_10
+recall10_vs_nprobe,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10
+recall10_vs_nprobe,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10
+recall10_vs_nprobe,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10
 recall10_vs_p95_latency,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,1,latency_p95_ms,0.8811197499999994,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10 / summary.latency_p95_ms
@@ -23,30 +23,30 @@ recall10_vs_p95_latency,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.reca
 recall10_vs_p95_latency,IVF-Flat,16,latency_p95_ms,10.5302592,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p95_latency,IVF-Flat,32,latency_p95_ms,19.4203568,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),1,recall_at_10,0.1178,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),1,latency_p95_ms,0.2644090999999999,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),4,recall_at_10,0.1624,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),4,latency_p95_ms,0.3477143,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),16,recall_at_10,0.1749,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),16,latency_p95_ms,0.4428491,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),32,recall_at_10,0.177,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (16 B),32,latency_p95_ms,0.6499224,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),1,recall_at_10,0.1528,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),1,latency_p95_ms,0.2213151,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),4,recall_at_10,0.2309,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),4,latency_p95_ms,0.30472525,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),16,recall_at_10,0.2626,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),16,latency_p95_ms,0.7626384999999999,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),32,recall_at_10,0.2662,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (32 B),32,latency_p95_ms,0.94845755,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),1,recall_at_10,0.1815,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),1,latency_p95_ms,0.2781148999999999,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),4,recall_at_10,0.2971,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),4,latency_p95_ms,0.4333149499999999,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),16,recall_at_10,0.3535,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),16,latency_p95_ms,0.9699351,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),32,recall_at_10,0.3617,summary.recall_at_10 / summary.latency_p95_ms
-recall10_vs_p95_latency,IVF-PQ (64 B),32,latency_p95_ms,2.1601769500000003,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,1,recall_at_10,0.1178,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,1,latency_p95_ms,0.2644090999999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,4,recall_at_10,0.1624,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,4,latency_p95_ms,0.3477143,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,16,recall_at_10,0.1749,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,16,latency_p95_ms,0.4428491,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,32,recall_at_10,0.177,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-16,32,latency_p95_ms,0.6499224,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,1,recall_at_10,0.1528,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,1,latency_p95_ms,0.2213151,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,4,recall_at_10,0.2309,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,4,latency_p95_ms,0.30472525,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,16,recall_at_10,0.2626,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,16,latency_p95_ms,0.7626384999999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,32,recall_at_10,0.2662,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-32,32,latency_p95_ms,0.94845755,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,1,recall_at_10,0.1815,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,1,latency_p95_ms,0.2781148999999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,4,latency_p95_ms,0.4333149499999999,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,16,latency_p95_ms,0.9699351,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / summary.latency_p95_ms
+recall10_vs_p95_latency,PQ-64,32,latency_p95_ms,2.1601769500000003,summary.recall_at_10 / summary.latency_p95_ms
 recall10_vs_p50_latency,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,1,latency_p50_ms,0.458046,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10 / summary.latency_p50_ms
@@ -55,38 +55,38 @@ recall10_vs_p50_latency,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.reca
 recall10_vs_p50_latency,IVF-Flat,16,latency_p50_ms,6.0163245,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10 / summary.latency_p50_ms
 recall10_vs_p50_latency,IVF-Flat,32,latency_p50_ms,12.3264595,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),1,recall_at_10,0.1178,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),1,latency_p50_ms,0.235665,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),4,recall_at_10,0.1624,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),4,latency_p50_ms,0.2831504999999999,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),16,recall_at_10,0.1749,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),16,latency_p50_ms,0.3350615,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),32,recall_at_10,0.177,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (16 B),32,latency_p50_ms,0.4990139999999999,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),1,recall_at_10,0.1528,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),1,latency_p50_ms,0.2003075,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),4,recall_at_10,0.2309,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),4,latency_p50_ms,0.249743,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),16,recall_at_10,0.2626,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),16,latency_p50_ms,0.511625,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),32,recall_at_10,0.2662,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (32 B),32,latency_p50_ms,0.719422,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),1,recall_at_10,0.1815,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),1,latency_p50_ms,0.2402825,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),4,recall_at_10,0.2971,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),4,latency_p50_ms,0.3344264999999999,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),16,recall_at_10,0.3535,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),16,latency_p50_ms,0.6966034999999999,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),32,recall_at_10,0.3617,summary.recall_at_10 / summary.latency_p50_ms
-recall10_vs_p50_latency,IVF-PQ (64 B),32,latency_p50_ms,1.574973,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,1,recall_at_10,0.1178,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,1,latency_p50_ms,0.235665,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,4,recall_at_10,0.1624,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,4,latency_p50_ms,0.2831504999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,16,recall_at_10,0.1749,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,16,latency_p50_ms,0.3350615,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,32,recall_at_10,0.177,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-16,32,latency_p50_ms,0.4990139999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,1,recall_at_10,0.1528,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,1,latency_p50_ms,0.2003075,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,4,recall_at_10,0.2309,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,4,latency_p50_ms,0.249743,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,16,recall_at_10,0.2626,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,16,latency_p50_ms,0.511625,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,32,recall_at_10,0.2662,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-32,32,latency_p50_ms,0.719422,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,1,recall_at_10,0.1815,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,1,latency_p50_ms,0.2402825,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,4,latency_p50_ms,0.3344264999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,16,latency_p50_ms,0.6966034999999999,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / summary.latency_p50_ms
+recall10_vs_p50_latency,PQ-64,32,latency_p50_ms,1.574973,summary.recall_at_10 / summary.latency_p50_ms
 index_size,IVF-Flat,,serialized_size_bytes,3851940491.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
 index_size,IVF-Flat,,compression_ratio_vs_ivfflat,1.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
-index_size,IVF-PQ (16 B),,serialized_size_bytes,28923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
-index_size,IVF-PQ (16 B),,compression_ratio_vs_ivfflat,133.17651398658506,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
-index_size,IVF-PQ (32 B),,serialized_size_bytes,44923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
-index_size,IVF-PQ (32 B),,compression_ratio_vs_ivfflat,85.74430570658986,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
-index_size,IVF-PQ (64 B),,serialized_size_bytes,76923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
-index_size,IVF-PQ (64 B),,compression_ratio_vs_ivfflat,50.07490410091721,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
+index_size,PQ-16,,serialized_size_bytes,28923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
+index_size,PQ-16,,compression_ratio_vs_ivfflat,133.17651398658506,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
+index_size,PQ-32,,serialized_size_bytes,44923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
+index_size,PQ-32,,compression_ratio_vs_ivfflat,85.74430570658986,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
+index_size,PQ-64,,serialized_size_bytes,76923572.0,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
+index_size,PQ-64,,compression_ratio_vs_ivfflat,50.07490410091721,summary.serialized_size_bytes / compression_ratio_vs_ivfflat
 recall10_vs_memory,IVF-Flat,1,recall_at_10,0.2391,summary.recall_at_10 / serialized_size_bytes
 recall10_vs_memory,IVF-Flat,1,size_mib,3673.49671459198,summary.recall_at_10 / serialized_size_bytes
 recall10_vs_memory,IVF-Flat,4,recall_at_10,0.5181999999999999,summary.recall_at_10 / serialized_size_bytes
@@ -95,74 +95,74 @@ recall10_vs_memory,IVF-Flat,16,recall_at_10,0.8034000000000001,summary.recall_at
 recall10_vs_memory,IVF-Flat,16,size_mib,3673.49671459198,summary.recall_at_10 / serialized_size_bytes
 recall10_vs_memory,IVF-Flat,32,recall_at_10,0.9124,summary.recall_at_10 / serialized_size_bytes
 recall10_vs_memory,IVF-Flat,32,size_mib,3673.49671459198,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),1,recall_at_10,0.1178,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),1,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),4,recall_at_10,0.1624,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),4,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),16,recall_at_10,0.1749,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),16,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),32,recall_at_10,0.177,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (16 B),32,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),1,recall_at_10,0.1528,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),1,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),4,recall_at_10,0.2309,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),4,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),16,recall_at_10,0.2626,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),16,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),32,recall_at_10,0.2662,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (32 B),32,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),1,recall_at_10,0.1815,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),1,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),4,recall_at_10,0.2971,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),4,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),16,recall_at_10,0.3535,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),16,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),32,recall_at_10,0.3617,summary.recall_at_10 / serialized_size_bytes
-recall10_vs_memory,IVF-PQ (64 B),32,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,1,recall_at_10,0.1178,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,1,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,4,recall_at_10,0.1624,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,4,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,16,recall_at_10,0.1749,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,16,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,32,recall_at_10,0.177,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-16,32,size_mib,27.583667755126953,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,1,recall_at_10,0.1528,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,1,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,4,recall_at_10,0.2309,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,4,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,16,recall_at_10,0.2626,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,16,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,32,recall_at_10,0.2662,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-32,32,size_mib,42.84245681762695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,1,recall_at_10,0.1815,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,1,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,4,recall_at_10,0.2971,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,4,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,16,recall_at_10,0.3535,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,16,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / serialized_size_bytes
+recall10_vs_memory,PQ-64,32,size_mib,73.36003494262695,summary.recall_at_10 / serialized_size_bytes
 qps_vs_nprobe,IVF-Flat,1,qps,5232.205707765112,summary.qps (median of reps)
 qps_vs_nprobe,IVF-Flat,4,qps,1610.097454398416,summary.qps (median of reps)
 qps_vs_nprobe,IVF-Flat,16,qps,430.26084075572345,summary.qps (median of reps)
 qps_vs_nprobe,IVF-Flat,32,qps,220.04641994553083,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (16 B),1,qps,16956.083269657876,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (16 B),4,qps,12201.071163789851,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (16 B),16,qps,7223.326287683452,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (16 B),32,qps,5529.985639330706,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (32 B),1,qps,13153.680367372212,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (32 B),4,qps,11174.739206515544,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (32 B),16,qps,5600.497118024808,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (32 B),32,qps,3275.0777031428174,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (64 B),1,qps,10344.064800574874,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (64 B),4,qps,6496.810670156408,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (64 B),16,qps,3304.031966432856,summary.qps (median of reps)
-qps_vs_nprobe,IVF-PQ (64 B),32,qps,1828.445364048637,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,1,qps,16956.083269657876,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,4,qps,12201.071163789851,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,16,qps,7223.326287683452,summary.qps (median of reps)
+qps_vs_nprobe,PQ-16,32,qps,5529.985639330706,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,1,qps,13153.680367372212,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,4,qps,11174.739206515544,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,16,qps,5600.497118024808,summary.qps (median of reps)
+qps_vs_nprobe,PQ-32,32,qps,3275.0777031428174,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,1,qps,10344.064800574874,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,4,qps,6496.810670156408,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,16,qps,3304.031966432856,summary.qps (median of reps)
+qps_vs_nprobe,PQ-64,32,qps,1828.445364048637,summary.qps (median of reps)
 exact1nn_hit100(a),IVF-Flat,1,exact1nn_hit_at_100,0.297,exact1nn_hit100.exact1nn_hit_at_100
 exact1nn_hit100(a),IVF-Flat,4,exact1nn_hit_at_100,0.581,exact1nn_hit100.exact1nn_hit_at_100
 exact1nn_hit100(a),IVF-Flat,16,exact1nn_hit_at_100,0.855,exact1nn_hit100.exact1nn_hit_at_100
 exact1nn_hit100(a),IVF-Flat,32,exact1nn_hit_at_100,0.929,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (16 B),1,exact1nn_hit_at_100,0.289,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (16 B),4,exact1nn_hit_at_100,0.526,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (16 B),16,exact1nn_hit_at_100,0.665,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (16 B),32,exact1nn_hit_at_100,0.684,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (32 B),1,exact1nn_hit_at_100,0.291,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (32 B),4,exact1nn_hit_at_100,0.563,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (32 B),16,exact1nn_hit_at_100,0.795,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (32 B),32,exact1nn_hit_at_100,0.841,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (64 B),1,exact1nn_hit_at_100,0.295,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (64 B),4,exact1nn_hit_at_100,0.579,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (64 B),16,exact1nn_hit_at_100,0.837,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(a),IVF-PQ (64 B),32,exact1nn_hit_at_100,0.9,exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(b),IVF-PQ (16 B),32,recall_at_10,0.177,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(b),IVF-PQ (16 B),32,exact1nn_hit_at_100,0.684,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(b),IVF-PQ (32 B),32,recall_at_10,0.2662,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(b),IVF-PQ (32 B),32,exact1nn_hit_at_100,0.841,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(b),IVF-PQ (64 B),32,recall_at_10,0.3617,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
-exact1nn_hit100(b),IVF-PQ (64 B),32,exact1nn_hit_at_100,0.9,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
-pq_code_size_vs_recall,IVF-PQ (16 B),32,pq_code_bytes,16.0,summary.pq_code_bytes / recall_at_10
-pq_code_size_vs_recall,IVF-PQ (16 B),32,recall_at_10,0.177,summary.pq_code_bytes / recall_at_10
-pq_code_size_vs_recall,IVF-PQ (32 B),32,pq_code_bytes,32.0,summary.pq_code_bytes / recall_at_10
-pq_code_size_vs_recall,IVF-PQ (32 B),32,recall_at_10,0.2662,summary.pq_code_bytes / recall_at_10
-pq_code_size_vs_recall,IVF-PQ (64 B),32,pq_code_bytes,64.0,summary.pq_code_bytes / recall_at_10
-pq_code_size_vs_recall,IVF-PQ (64 B),32,recall_at_10,0.3617,summary.pq_code_bytes / recall_at_10
+exact1nn_hit100(a),PQ-16,1,exact1nn_hit_at_100,0.289,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-16,4,exact1nn_hit_at_100,0.526,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-16,16,exact1nn_hit_at_100,0.665,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-16,32,exact1nn_hit_at_100,0.684,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-32,1,exact1nn_hit_at_100,0.291,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-32,4,exact1nn_hit_at_100,0.563,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-32,16,exact1nn_hit_at_100,0.795,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-32,32,exact1nn_hit_at_100,0.841,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-64,1,exact1nn_hit_at_100,0.295,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-64,4,exact1nn_hit_at_100,0.579,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-64,16,exact1nn_hit_at_100,0.837,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(a),PQ-64,32,exact1nn_hit_at_100,0.9,exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(b),PQ-16,32,recall_at_10,0.177,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(b),PQ-16,32,exact1nn_hit_at_100,0.684,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(b),PQ-32,32,recall_at_10,0.2662,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(b),PQ-32,32,exact1nn_hit_at_100,0.841,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(b),PQ-64,32,recall_at_10,0.3617,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
+exact1nn_hit100(b),PQ-64,32,exact1nn_hit_at_100,0.9,summary.recall_at_10 / exact1nn_hit100.exact1nn_hit_at_100
+pq_code_size_vs_recall,PQ-16,32,pq_code_bytes,16.0,summary.pq_code_bytes / recall_at_10
+pq_code_size_vs_recall,PQ-16,32,recall_at_10,0.177,summary.pq_code_bytes / recall_at_10
+pq_code_size_vs_recall,PQ-32,32,pq_code_bytes,32.0,summary.pq_code_bytes / recall_at_10
+pq_code_size_vs_recall,PQ-32,32,recall_at_10,0.2662,summary.pq_code_bytes / recall_at_10
+pq_code_size_vs_recall,PQ-64,32,pq_code_bytes,64.0,summary.pq_code_bytes / recall_at_10
+pq_code_size_vs_recall,PQ-64,32,recall_at_10,0.3617,summary.pq_code_bytes / recall_at_10
 latency_stability_p50,IVF-Flat,1,latency_p50_ms,0.458046,summary of both runs
 latency_stability_p50,IVF-Flat,1,latency_p50_ms_cmp,0.502332,summary of both runs
 latency_stability_p50,IVF-Flat,4,latency_p50_ms,1.5547715,summary of both runs
@@ -171,30 +171,30 @@ latency_stability_p50,IVF-Flat,16,latency_p50_ms,6.0163245,summary of both runs
 latency_stability_p50,IVF-Flat,16,latency_p50_ms_cmp,6.2796485,summary of both runs
 latency_stability_p50,IVF-Flat,32,latency_p50_ms,12.3264595,summary of both runs
 latency_stability_p50,IVF-Flat,32,latency_p50_ms_cmp,12.2074685,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),1,latency_p50_ms,0.235665,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),1,latency_p50_ms_cmp,0.184582,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),4,latency_p50_ms,0.2831504999999999,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),4,latency_p50_ms_cmp,0.223555,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),16,latency_p50_ms,0.3350615,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),16,latency_p50_ms_cmp,0.345821,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),32,latency_p50_ms,0.4990139999999999,summary of both runs
-latency_stability_p50,IVF-PQ (16 B),32,latency_p50_ms_cmp,0.491067,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),1,latency_p50_ms,0.2003075,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),1,latency_p50_ms_cmp,0.2694155,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),4,latency_p50_ms,0.249743,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),4,latency_p50_ms_cmp,0.2671225,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),16,latency_p50_ms,0.511625,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),16,latency_p50_ms_cmp,0.4705525,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),32,latency_p50_ms,0.719422,summary of both runs
-latency_stability_p50,IVF-PQ (32 B),32,latency_p50_ms_cmp,0.9342415,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),1,latency_p50_ms,0.2402825,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),1,latency_p50_ms_cmp,0.298072,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),4,latency_p50_ms,0.3344264999999999,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),4,latency_p50_ms_cmp,0.362147,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),16,latency_p50_ms,0.6966034999999999,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),16,latency_p50_ms_cmp,0.744585,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),32,latency_p50_ms,1.574973,summary of both runs
-latency_stability_p50,IVF-PQ (64 B),32,latency_p50_ms_cmp,1.252491,summary of both runs
+latency_stability_p50,PQ-16,1,latency_p50_ms,0.235665,summary of both runs
+latency_stability_p50,PQ-16,1,latency_p50_ms_cmp,0.184582,summary of both runs
+latency_stability_p50,PQ-16,4,latency_p50_ms,0.2831504999999999,summary of both runs
+latency_stability_p50,PQ-16,4,latency_p50_ms_cmp,0.223555,summary of both runs
+latency_stability_p50,PQ-16,16,latency_p50_ms,0.3350615,summary of both runs
+latency_stability_p50,PQ-16,16,latency_p50_ms_cmp,0.345821,summary of both runs
+latency_stability_p50,PQ-16,32,latency_p50_ms,0.4990139999999999,summary of both runs
+latency_stability_p50,PQ-16,32,latency_p50_ms_cmp,0.491067,summary of both runs
+latency_stability_p50,PQ-32,1,latency_p50_ms,0.2003075,summary of both runs
+latency_stability_p50,PQ-32,1,latency_p50_ms_cmp,0.2694155,summary of both runs
+latency_stability_p50,PQ-32,4,latency_p50_ms,0.249743,summary of both runs
+latency_stability_p50,PQ-32,4,latency_p50_ms_cmp,0.2671225,summary of both runs
+latency_stability_p50,PQ-32,16,latency_p50_ms,0.511625,summary of both runs
+latency_stability_p50,PQ-32,16,latency_p50_ms_cmp,0.4705525,summary of both runs
+latency_stability_p50,PQ-32,32,latency_p50_ms,0.719422,summary of both runs
+latency_stability_p50,PQ-32,32,latency_p50_ms_cmp,0.9342415,summary of both runs
+latency_stability_p50,PQ-64,1,latency_p50_ms,0.2402825,summary of both runs
+latency_stability_p50,PQ-64,1,latency_p50_ms_cmp,0.298072,summary of both runs
+latency_stability_p50,PQ-64,4,latency_p50_ms,0.3344264999999999,summary of both runs
+latency_stability_p50,PQ-64,4,latency_p50_ms_cmp,0.362147,summary of both runs
+latency_stability_p50,PQ-64,16,latency_p50_ms,0.6966034999999999,summary of both runs
+latency_stability_p50,PQ-64,16,latency_p50_ms_cmp,0.744585,summary of both runs
+latency_stability_p50,PQ-64,32,latency_p50_ms,1.574973,summary of both runs
+latency_stability_p50,PQ-64,32,latency_p50_ms_cmp,1.252491,summary of both runs
 latency_stability_p95,IVF-Flat,1,latency_p95_ms,0.8811197499999994,summary of both runs
 latency_stability_p95,IVF-Flat,1,latency_p95_ms_cmp,1.2941465999999993,summary of both runs
 latency_stability_p95,IVF-Flat,4,latency_p95_ms,3.0344614499999993,summary of both runs
@@ -203,27 +203,27 @@ latency_stability_p95,IVF-Flat,16,latency_p95_ms,10.5302592,summary of both runs
 latency_stability_p95,IVF-Flat,16,latency_p95_ms_cmp,10.8983868,summary of both runs
 latency_stability_p95,IVF-Flat,32,latency_p95_ms,19.4203568,summary of both runs
 latency_stability_p95,IVF-Flat,32,latency_p95_ms_cmp,19.1025224,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),1,latency_p95_ms,0.2644090999999999,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),1,latency_p95_ms_cmp,0.20247645,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),4,latency_p95_ms,0.3477143,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),4,latency_p95_ms_cmp,0.2656488999999999,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),16,latency_p95_ms,0.4428491,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),16,latency_p95_ms_cmp,0.45703835,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),32,latency_p95_ms,0.6499224,summary of both runs
-latency_stability_p95,IVF-PQ (16 B),32,latency_p95_ms_cmp,0.6461079000000001,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),1,latency_p95_ms,0.2213151,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),1,latency_p95_ms_cmp,0.3041704,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),4,latency_p95_ms,0.30472525,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),4,latency_p95_ms_cmp,0.3271775999999999,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),16,latency_p95_ms,0.7626384999999999,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),16,latency_p95_ms_cmp,0.6325951999999999,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),32,latency_p95_ms,0.94845755,summary of both runs
-latency_stability_p95,IVF-PQ (32 B),32,latency_p95_ms_cmp,1.2540378,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),1,latency_p95_ms,0.2781148999999999,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),1,latency_p95_ms_cmp,0.3726396999999999,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),4,latency_p95_ms,0.4333149499999999,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),4,latency_p95_ms_cmp,0.4755871499999999,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),16,latency_p95_ms,0.9699351,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),16,latency_p95_ms_cmp,1.0435839,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),32,latency_p95_ms,2.1601769500000003,summary of both runs
-latency_stability_p95,IVF-PQ (64 B),32,latency_p95_ms_cmp,1.69211035,summary of both runs
+latency_stability_p95,PQ-16,1,latency_p95_ms,0.2644090999999999,summary of both runs
+latency_stability_p95,PQ-16,1,latency_p95_ms_cmp,0.20247645,summary of both runs
+latency_stability_p95,PQ-16,4,latency_p95_ms,0.3477143,summary of both runs
+latency_stability_p95,PQ-16,4,latency_p95_ms_cmp,0.2656488999999999,summary of both runs
+latency_stability_p95,PQ-16,16,latency_p95_ms,0.4428491,summary of both runs
+latency_stability_p95,PQ-16,16,latency_p95_ms_cmp,0.45703835,summary of both runs
+latency_stability_p95,PQ-16,32,latency_p95_ms,0.6499224,summary of both runs
+latency_stability_p95,PQ-16,32,latency_p95_ms_cmp,0.6461079000000001,summary of both runs
+latency_stability_p95,PQ-32,1,latency_p95_ms,0.2213151,summary of both runs
+latency_stability_p95,PQ-32,1,latency_p95_ms_cmp,0.3041704,summary of both runs
+latency_stability_p95,PQ-32,4,latency_p95_ms,0.30472525,summary of both runs
+latency_stability_p95,PQ-32,4,latency_p95_ms_cmp,0.3271775999999999,summary of both runs
+latency_stability_p95,PQ-32,16,latency_p95_ms,0.7626384999999999,summary of both runs
+latency_stability_p95,PQ-32,16,latency_p95_ms_cmp,0.6325951999999999,summary of both runs
+latency_stability_p95,PQ-32,32,latency_p95_ms,0.94845755,summary of both runs
+latency_stability_p95,PQ-32,32,latency_p95_ms_cmp,1.2540378,summary of both runs
+latency_stability_p95,PQ-64,1,latency_p95_ms,0.2781148999999999,summary of both runs
+latency_stability_p95,PQ-64,1,latency_p95_ms_cmp,0.3726396999999999,summary of both runs
+latency_stability_p95,PQ-64,4,latency_p95_ms,0.4333149499999999,summary of both runs
+latency_stability_p95,PQ-64,4,latency_p95_ms_cmp,0.4755871499999999,summary of both runs
+latency_stability_p95,PQ-64,16,latency_p95_ms,0.9699351,summary of both runs
+latency_stability_p95,PQ-64,16,latency_p95_ms_cmp,1.0435839,summary of both runs
+latency_stability_p95,PQ-64,32,latency_p95_ms,2.1601769500000003,summary of both runs
+latency_stability_p95,PQ-64,32,latency_p95_ms_cmp,1.69211035,summary of both runs

@@ -114,7 +114,7 @@ def main(argv=None):
                     label=f"PQ + exact rerank of top {r}")
             _end_label(ax, s.nprobe.iloc[-1], s.recall_at_10.iloc[-1], f"R={r}", INK2)
         _end_label(ax, base.nprobe.iloc[-1], base.pq_recall_at_10.iloc[-1], "PQ", INK2)
-        ax.set_title(f"IVF-PQ M={m} ({m} B/vector)", color=INK)
+        ax.set_title(f"PQ-{m} ({m} bytes/vector)", color=INK)
         _nprobe_axis(ax, nprobes)
         ax.tick_params(axis="x", labelrotation=45)
         ax.set_ylim(0, 1.02)
@@ -141,7 +141,7 @@ def main(argv=None):
                         label=f"PQ + exact rerank of top {r}")
             ax.set_xscale("log")
             _readable_log(ax.xaxis, subs=(1.0,))
-            ax.set_title(f"IVF-PQ M={m} ({m} B/vector)", color=INK)
+            ax.set_title(f"PQ-{m} ({m} bytes/vector)", color=INK)
             ax.set_xlabel("Queries/s (batch, 4 threads)")
             ax.set_ylim(0, 1.02)
         np.atleast_1d(axes)[0].set_ylabel("Recall@10")
@@ -178,7 +178,7 @@ def main(argv=None):
                 if len(s):
                     ax.plot(s.nprobe, s.recall_at_10, color=INK2, ls=ls, lw=1.2,
                             label=f"{name} + exact rerank of top 100")
-            ax.set_title(f"M={m} ({m} B/vector)", color=INK)
+            ax.set_title(f"PQ-{m} vs. OPQ-{m} ({m} bytes/vector)", color=INK)
             _nprobe_axis(ax, nprobes)
             ax.tick_params(axis="x", labelrotation=45)
             ax.set_ylim(0, 1.02)

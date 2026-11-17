@@ -116,7 +116,7 @@ def main(argv=None):
         d = df[df.label == lab].sort_values("nprobe")
         for ax, x in [(a1, "latency_p95_ms"), (a2, "file_mib")]:
             ax.scatter(d[x], d.recall_at_10, color=s["color"], marker=s["marker"], s=36,
-                       edgecolor="white", linewidth=0.8, zorder=3, label=lab)
+                       edgecolor="white", linewidth=0.8, zorder=3, label=s["short"])
         a1.plot(d.latency_p95_ms, d.recall_at_10, color=s["color"], lw=1.0, alpha=0.6, zorder=2)
         _end_label(a1, d.latency_p95_ms.iloc[-1], d.recall_at_10.iloc[-1], s["short"], INK2)
     for ax, x, fcol in [(a1, "latency_p95_ms", "frontier_recall_vs_p95"),

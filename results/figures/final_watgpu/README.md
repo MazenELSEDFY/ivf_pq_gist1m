@@ -12,7 +12,7 @@ Every plotted value is listed with its source column in `plotted_values.csv`. No
 * Latency: one query per search call, per-query timing; p50/p95 computed per repetition, median over repetitions reported (ms/query).
 * Throughput: all 1000 queries in one call; median QPS over repetitions.
 * Index size: bytes of the serialized `.faiss` file (MiB = 2^20 B, GiB = 2^30 B).
-* Exact-1NN Hit@100: fraction of queries whose exact nearest neighbour appears anywhere in the approximate top-100. Not Recall@100. Computed by `scripts/compute_exact1nn_hit.py` from the run's cached indexes (no timing); that script verified Recall@1/10/100 equal the run's recorded values exactly before saving `gist1m_20261110_003629_exact1nn_hit100.csv`.
+* Exact-1NN Hit@100: fraction of queries whose exact nearest neighbor appears anywhere in the approximate top-100. Not Recall@100. Computed by `scripts/compute_exact1nn_hit.py` from the run's cached indexes (no timing); that script verified Recall@1/10/100 equal the run's recorded values exactly before saving `gist1m_20261110_003629_exact1nn_hit100.csv`.
 
 ## Latency caveat
 
@@ -21,9 +21,9 @@ Latency was measured on Intel(R) Xeon(R) Gold 5415+, 607 GiB RAM, host watgpu208
 | index | swap-in during search |
 |---|---|
 | IVF-Flat | 0 MiB |
-| IVF-PQ (16 B) | 0 MiB |
-| IVF-PQ (32 B) | 0 MiB |
-| IVF-PQ (64 B) | 0 MiB |
+| PQ-16 | 0 MiB |
+| PQ-32 | 0 MiB |
+| PQ-64 | 0 MiB |
 
 No swapping occurred during timed search.
 

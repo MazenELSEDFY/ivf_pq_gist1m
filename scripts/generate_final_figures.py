@@ -83,9 +83,9 @@ PLOTTED: list[dict] = []
 # --------------------------------------------------------------------------- helpers
 
 def series_names(df: pd.DataFrame) -> list[str]:
-    """Display name per index, derived from data: IVF-Flat, IVF-PQ (<code bytes> B)."""
+    """Display name per index, derived from data: IVF-Flat, PQ-<code bytes> (IVF-PQ)."""
     df["name"] = np.where(df["index_type"] == "ivfflat", "IVF-Flat",
-                          "IVF-PQ (" + df["pq_code_bytes"].fillna(0).astype(int).astype(str) + " B)")
+                          "PQ-" + df["pq_code_bytes"].fillna(0).astype(int).astype(str))
     pq = (df.loc[df["index_type"] == "ivfpq", ["pq_code_bytes", "name"]]
           .drop_duplicates().sort_values("pq_code_bytes")["name"].tolist())
     assert len(pq) <= len(PQ_STYLE)
@@ -97,7 +97,7 @@ def style(name: str, order: list[str]) -> dict:
 
 
 def short(name: str) -> str:
-    return name if name == "IVF-Flat" else "PQ" + name.split("(")[1].split()[0]
+    return name
 
 
 def record(fig: str, df: pd.DataFrame, cols: list[str], source: str):
@@ -233,7 +233,7 @@ def fig_recall_vs_memory(df, order, nprobes, out):
         ax.scatter([x], [top["recall_at_10"]], s=34, zorder=3, color=st["color"],
                    marker=st["marker"], edgecolor="white", linewidth=0.6, label=n)
         # IVF-Flat, PQ16, PQ32 labelled on the left, the largest PQ on the right (keeps labels
-        # off the neighbouring whiskers)
+        # off the neighboring whiskers)
         ha, dx = ("left", 6) if n == order[-1] else ("right", -6)
         ax.annotate(f"{short(n)}\n{top['recall_at_10']:.3f}", (x, top["recall_at_10"]),
                     xytext=(dx, 0), textcoords="offset points", ha=ha, va="center",
@@ -305,7 +305,7 @@ def fig_hit100(df, hit, order, nprobes, out):
                    textcoords="offset points", fontsize=7, color=INK, va="center", ha="left")
     a.set_ylabel("Exact-1NN Hit@100")
     a.legend(loc="upper left", frameon=False, fontsize=6.5)
-    a.set_title("(a) true nearest neighbour in top-100", fontsize=8, loc="left")
+    a.set_title("(a) true nearest neighbor in top-100", fontsize=8, loc="left")
 
     pq = hit[(hit["index_type"] == "ivfpq") & (hit["nprobe"] == p_max)].sort_values("pq_m")
     x = np.arange(len(pq))
@@ -428,7 +428,7 @@ def write_readme(out, run_id, cmp_id, meta, df, stab, hit_path):
         f"median over repetitions reported (ms/query).",
         f"* Throughput: all {meta['throughput_batch_size']} queries in one call; median QPS over repetitions.",
         "* Index size: bytes of the serialized `.faiss` file (MiB = 2^20 B, GiB = 2^30 B).",
-        f"* Exact-1NN Hit@100: fraction of queries whose exact nearest neighbour appears anywhere "
+        f"* Exact-1NN Hit@100: fraction of queries whose exact nearest neighbor appears anywhere "
         f"in the approximate top-100. Not Recall@100. Computed by `scripts/compute_exact1nn_hit.py` "
         f"from the run's cached indexes (no timing); that script verified Recall@1/10/100 equal the "
         f"run's recorded values exactly before saving `{hit_path.name}`.",

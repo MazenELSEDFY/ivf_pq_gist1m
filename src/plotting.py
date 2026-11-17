@@ -43,7 +43,7 @@ def styles(df: pd.DataFrame) -> dict[str, dict]:
     ms = sorted(int(m) for m in df.loc[df["index_type"] == "ivfpq", "pq_m"].dropna().unique())
     for i, m in enumerate(ms):
         j = min(i, len(PQ_RAMP) - 1) if len(ms) <= 3 else int(round(i * 2 / (len(ms) - 1)))
-        out[f"IVF-PQ M={m}"] = dict(color=PQ_RAMP[j], marker=PQ_MARKERS[j % 3], short=f"PQ{m}")
+        out[f"IVF-PQ M={m}"] = dict(color=PQ_RAMP[j], marker=PQ_MARKERS[j % 3], short=f"PQ-{m}")
     return out
 
 
